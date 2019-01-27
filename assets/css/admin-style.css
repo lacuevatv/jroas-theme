@@ -133,18 +133,18 @@ justify-content: space-between;
 /*
  * META BOXES
 */
-.uk_partner_metabox_wrapper .title-destacado-metabox {
+.jrojas_metabox_wrapper .title-destacado-metabox {
   text-transform: uppercase;
   font-size: 130%;
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.uk_partner_metabox_wrapper p {
+.jrojas_metabox_wrapper p {
   font-style: italic;
   font-size: 110%;
   margin-bottom: 2rem;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .metabox_input_data {
   display: flex;
   display: -o-flex;
   display: -ms-flex;
@@ -157,26 +157,26 @@ justify-content: space-between;
   justify-content: flex-start;
   margin: 1rem 0;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data label {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .metabox_input_data label {
   width: 25%;
   font-weight: bold;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data input, .uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data textarea {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .metabox_input_data input, .jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .metabox_input_data textarea {
   width: 50%;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data input[type=checkbox] {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .metabox_input_data input[type=checkbox] {
   width: 1rem;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data button {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .metabox_input_data button {
   width: 25%;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox {
   text-align: left;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .button {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .button {
   margin: 1rem 0;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria {
   margin: 4rem 0 2rem;
   display: flex;
   display: -o-flex;
@@ -194,18 +194,18 @@ justify-content: space-between;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li {
   width: 150px;
   height: 150px;
   padding: 0.5rem;
   position: relative;
   overflow: hidden;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li img {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li img {
   width: 100%;
   height: auto;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button {
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
@@ -220,7 +220,7 @@ justify-content: space-between;
   top: 1rem;
   right: 1rem;
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button:after {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button:after {
   content: "X";
   position: absolute;
   top: 50%;
@@ -230,7 +230,7 @@ justify-content: space-between;
   -ms-transform: translate3D(-50%, -50%, 0);
   transform: translate3D(-50%, -50%, 0);
 }
-.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button:hover {
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button:hover {
   zoom: 1;
   filter: alpha(opacity=70);
   opacity: 0.7;

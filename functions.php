@@ -234,9 +234,9 @@ require get_template_directory() . '/inc/template-tags.php';
 //require get_template_directory() . '/inc/customizer.php';
 
 //Custon Posty Types
-//require get_template_directory() . '/inc/post-type.php';
+require get_template_directory() . '/inc/post-type.php';
 //meta boxes
-//require get_template_directory() . '/admin/meta-boxes.php';
+require get_template_directory() . '/admin/meta-boxes.php';
 
 //Load settings files.
 //require get_template_directory() . '/admin/settings.php';

@@ -33,43 +33,6 @@
 if ( !function_exists( 'jrojas_create_post_type' ) ) :
     function jrojas_create_post_type () {
         /*
-         * PARTNERS POST TYPE 
-        */
-        register_post_type ( 'partners', array (
-            'labels'       => array(
-                'name'          => __( 'partners', 'jrojas' ),
-                'singular_name' => __( 'partner', 'jrojas' ),
-            ),
-            'supports'      => array (
-                'title', 'excerpt', 'thumbnail'
-            ),
-            'public'      => true,
-            'has_archive' => false,
-            'register_meta_box_cb' => 'jrojas_meta_box_partners',
-            'show_in_nav_menus' => false,
-            'menu_icon'   => 'dashicons-groups'
-            )
-        );
-
-        /*
-         * TESTIMONIOS POST TYPE 
-        */
-        register_post_type ( 'testimonios', array (
-            'labels'       => array(
-                'name'          => __( 'testimonios', 'jrojas' ),
-                'singular_name' => __( 'testimonio', 'jrojas' ),
-            ),
-            'supports'      => array (
-                'title', 'editor'
-            ),
-            'public'      => true,
-            'has_archive' => false,
-            'show_in_nav_menus' => false,
-            'menu_icon'   => 'dashicons-editor-quote'
-            )
-        );
-
-        /*
          * SLIDERS POST TYPE 
         */
         register_post_type ( 'sliders', array (
@@ -78,15 +41,74 @@ if ( !function_exists( 'jrojas_create_post_type' ) ) :
                 'singular_name' => __( 'slider', 'jrojas' ),
             ),
             'supports'      => array (
+                'title', 'excerpt',
+            ),
+            'public'      => true,
+            'has_archive' => false,
+            //'register_meta_box_cb' => 'jrojas_meta_box_sliders',
+            'show_in_nav_menus' => false,
+            'menu_icon'   => 'dashicons-desktop'
+            )
+        );
+
+        /*
+         * AGENDA POST TYPE 
+        */
+        register_post_type ( 'agenda', array (
+            'labels'       => array(
+                'name'          => __( 'agenda', 'jrojas' ),
+                'singular_name' => __( 'fecha', 'jrojas' ),
+            ),
+            'supports'      => array (
+                'title', 'excerpt', 'editor'
+            ),
+            'public'      => true,
+            'has_archive' => false,
+            //'register_meta_box_cb' => 'jrojas_meta_box_agenda',
+            'show_in_nav_menus' => false,
+            'menu_icon'   => 'dashicons-calendar-alt'
+            )
+        );
+
+        /*
+         * GALERIA POST TYPE 
+        */
+        register_post_type ( 'galeria', array (
+            'labels'       => array(
+                'name'          => __( 'galeria', 'jrojas' ),
+                'singular_name' => __( 'galeria', 'jrojas' ),
+            ),
+            'supports'      => array (
+                'title', 'excerpt'
+            ),
+            'public'      => true,
+            'has_archive' => false,
+            //'register_meta_box_cb' => 'jrojas_meta_box_galeria',
+            'show_in_nav_menus' => false,
+            'menu_icon'   => 'dashicons-images-alt'
+            )
+        );
+
+        /*
+         * OBRAS POST TYPE 
+        */
+        register_post_type ( 'obras', array (
+            'labels'       => array(
+                'name'          => __( 'obras', 'jrojas' ),
+                'singular_name' => __( 'obra', 'jrojas' ),
+            ),
+            'supports'      => array (
                 'title', 'editor'
             ),
             'public'      => true,
             'has_archive' => false,
+            //'register_meta_box_cb' => 'jrojas_meta_box_obras',
             'show_in_nav_menus' => false,
-            'register_meta_box_cb' => 'jrojas_meta_box_sliders',
-            'menu_icon'   => 'dashicons-desktop'
+            'menu_icon'   => 'dashicons-playlist-audio'
             )
         );
+
+        
 
     }//jrojas_create_post_type()
     
@@ -104,13 +126,13 @@ add_action( 'init', 'jrojas_create_post_type', 20 );
  * @subpackage jrojas
  * @since 1.0
  */
-if ( !function_exists( 'jrojas_register_private_taxonomy' ) ) :
+/*if ( !function_exists( 'jrojas_register_private_taxonomy' ) ) :
     function jrojas_register_private_taxonomy () {
          
         /**
          * CATEGORIA ALOJAMIENTOS
         */
-        register_taxonomy( 'catalojamientos', 'alojamientos', array(
+        /*register_taxonomy( 'catalojamientos', 'alojamientos', array(
             'label'        => __( 'Categorías de Alojamientos', 'jrojas' ),
             'public'       => true,
             'rewrite'      => false,
@@ -122,7 +144,7 @@ if ( !function_exists( 'jrojas_register_private_taxonomy' ) ) :
     }
 endif;
 
-add_action( 'init', 'jrojas_register_private_taxonomy' );
+add_action( 'init', 'jrojas_register_private_taxonomy' );*/
 
 // funciones generales //
 

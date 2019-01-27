@@ -59,14 +59,14 @@ jQuery(function($){
     });
 
     //metaboxes: checkbox
-    $('.input-checkbox').click(function(){
+    /*$('.input-checkbox').click(function(){
         $(this).attr
         if ( $(this).attr('checked') == 'checked' ) {
             $(this).val('1');
         } else {
             $(this).val('0');
         }
-    });
+    });*/
  
 
     //SUBE MUCHAS IMAGENES PARA LA GALERÍA
