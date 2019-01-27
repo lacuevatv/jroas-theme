@@ -1,0 +1,239 @@
+/*FUENTES*/
+/*COLORES*/
+/*GRID OPTIONS*/
+/*MIXINS*/
+/*EXTENSIONS
+*claves que no funcionan solas
+*/
+.title-basic-dash {
+  padding-bottom: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.title-basic-dash:before {
+  content: "";
+  display: block;
+  background-color: #18bdca;
+  width: 30%;
+  min-width: 1rem;
+  max-width: 2.5rem;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.title-basic-dash-center {
+  text-align: center;
+}
+.title-basic-dash-center:before {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/*
+@media (min-width: $md) {}
+-webkit-
+-moz-
+-ms-
+-o-
+
+display: flex;
+display: -o-flex;
+display: -ms-flex;
+display: -moz-flex;
+display: -webkit-flex;
+-webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+-o-align-items: center;
+align-items: center;
+-webkit-justify-content: center;
+-moz-justify-content: center;
+-ms-justify-content: center;
+-o-justify-content: center;
+justify-content: center;
+
+display: flex;
+display: -o-flex;
+display: -ms-flex;
+display: -moz-flex;
+display: -webkit-flex;
+-webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+-o-align-items: center;
+align-items: center;
+-webkit-justify-content: space-between;
+-moz-justify-content: space-between;
+-ms-justify-content: space-between;
+-o-justify-content: space-between;
+justify-content: space-between;
+
+
+&:hover {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+*/
+/*
+ * setting page
+*/
+.uk-settings-page h1 {
+  font-size: 2rem;
+  margin: 3rem 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.uk-settings-page form {
+  margin: 3rem 2rem;
+  text-align: center;
+}
+.uk-settings-page form table tr {
+  border-bottom: 1px solid #bbb;
+}
+.uk-settings-page form .uk-settings-page-inputs {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  margin: 0.5rem 0;
+}
+.uk-settings-page form .uk-settings-page-inputs label {
+  text-align: left;
+  width: 15%;
+}
+.uk-settings-page form .uk-settings-page-inputs input, .uk-settings-page form .uk-settings-page-inputs textarea {
+  text-align: left;
+  display: block;
+  width: 70%;
+}
+.uk-settings-page form .uk-settings-page-inputs textarea {
+  height: 100px;
+}
+.uk-settings-page form .uk-settings-page-inputs input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.1rem;
+}
+.uk-settings-page form .uk-settings-page-inputs .upload-images-btn {
+  width: 15%;
+}
+
+/*
+ * META BOXES
+*/
+.uk_partner_metabox_wrapper .title-destacado-metabox {
+  text-transform: uppercase;
+  font-size: 130%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.uk_partner_metabox_wrapper p {
+  font-style: italic;
+  font-size: 110%;
+  margin-bottom: 2rem;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data label {
+  width: 25%;
+  font-weight: bold;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data input, .uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data textarea {
+  width: 50%;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data input[type=checkbox] {
+  width: 1rem;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .metabox_input_data button {
+  width: 25%;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox {
+  text-align: left;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .button {
+  margin: 1rem 0;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria {
+  margin: 4rem 0 2rem;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li {
+  width: 150px;
+  height: 150px;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li img {
+  width: 100%;
+  height: auto;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #333;
+  border: none;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button:after {
+  content: "X";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  -moz-transform: translate3D(-50%, -50%, 0);
+  -ms-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+}
+.uk_partner_metabox_wrapper .uk_partner_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .imagenes-galeria li button:hover {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=admin-style.css.map */

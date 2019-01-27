@@ -1,0 +1,804 @@
+/*************/
+/* Variables */
+/*************/
+/************************************/
+/*           Media queries         */
+/************************************/
+/**********************/
+/*   Mobile first     */
+/**********************/
+.wrapper#home .headline {
+  position: relative;
+  padding: 45vw 0 5vw;
+}
+.wrapper#home .headline::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 50%;
+  background: #ffffff;
+  top: 0%;
+  left: 50%;
+}
+.wrapper#home header #carousel-home .carousel-item {
+  padding: 0% 0 15%;
+}
+.wrapper#home header #carousel-home .carousel-item .carousel-caption {
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+}
+.wrapper#home header #carousel-home .carousel-item .carousel-caption .cta-carousel {
+  font-size: 2.75vw;
+  padding: 3% 9%;
+}
+.wrapper#home header #carousel-home .carousel-control-prev img,
+.wrapper#home header #carousel-home .carousel-control-next img {
+  width: 4vw;
+}
+.wrapper#home #instafeed {
+  padding: 2vw 0 6vw;
+}
+.wrapper#home #newsletter .headline span {
+  display: block;
+  font-weight: normal;
+  font-size: 85%;
+  line-height: 1.5;
+}
+.wrapper#home #newsletter form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper#home #newsletter form .floating-label {
+  position: relative;
+  width: 60%;
+}
+.wrapper#home #newsletter form .floating-label input[type=text] {
+  background: #000;
+  border: 1px solid #979797;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 3vw;
+  height: 16vw;
+  margin: 10% auto;
+  padding: 5% 0;
+  transition: all 0.3s linear;
+  width: 100%;
+}
+.wrapper#home #newsletter form .floating-label input[type=text]:focus {
+  outline: 0;
+  border: 2px solid #979797;
+}
+.wrapper#home #newsletter form .floating-label label {
+  font-size: 4vw;
+  color: #ffffff;
+  opacity: 0;
+  font-family: 'Raleway' sans-serif;
+  transition: all 0.3s linear;
+  position: absolute;
+  bottom: calc(50% + 2vw);
+  left: 0;
+}
+.wrapper#home #newsletter form .floating-label input:not(:placeholder-shown) + label {
+  transform: translateY(-5vw);
+  opacity: 1;
+}
+.wrapper#home #newsletter form button {
+  background: #ffffff;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 2.75vw;
+  line-height: normal;
+  padding: 3% 9%;
+}
+.wrapper#agenda {
+  background-color: #16113f;
+}
+.wrapper#agenda main {
+  background-image: url(../img/dist/bg-agenda@2x.png);
+  background-size: cover;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  padding-bottom: 10%;
+}
+.wrapper#agenda main #navegacion #slick-carousel-fecha .fecha {
+  display: flex;
+  flex-flow: column-reverse;
+  transition: opacity 0.5s linear;
+}
+.wrapper#agenda main #navegacion #slick-carousel-fecha .fecha:not(.slick-center) {
+  opacity: 0.5;
+}
+.wrapper#agenda main #navegacion #slick-carousel-fecha .fecha h4 {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 3.5vw;
+}
+.wrapper#agenda main #navegacion #slick-carousel-fecha .fecha .mes {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4vw;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos {
+  position: relative;
+  outline: none;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow,
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+  position: absolute;
+  top: 10%;
+  z-index: 9999999;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow {
+  left: 5%;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+  right: 5%;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
+  outline: none;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info {
+  width: 60%;
+  margin: 7% auto 0;
+  min-height: 50vw;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div {
+  margin: 0 0 15%;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div h3.dia {
+  color: #8e5495;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 4vw;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div h4.lugar {
+  color: #8e5495;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 4vw;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion p {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.4vw;
+  margin: 0;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn {
+  position: absolute;
+  bottom: 0%;
+  right: -10%;
+  outline: none;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn span {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10vw;
+  text-align: center;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .extra-info {
+  width: 60%;
+  margin: 7% auto 0;
+  min-height: 50vw;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  position: relative;
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .extra-info :focus {
+  outline: none;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .main-info {
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info {
+  opacity: 1;
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info p {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.4vw;
+  margin: 0;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn {
+  position: absolute;
+  bottom: 0%;
+  right: -10%;
+}
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn span {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10vw;
+  text-align: center;
+}
+.wrapper#bio main {
+  background-color: #16113f;
+}
+.wrapper#bio main .col-text .row .biografia-slider p {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.wrapper#bio main .col-text .row .biografia-slider p span {
+  display: block;
+  font-weight: bold;
+}
+.wrapper#bio main .col-text .row .biografia-slider img {
+  margin: 0 0 5%;
+}
+.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+  transition: all 0.5s linear;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
+  transform: rotate(-90deg);
+  width: 5%;
+}
+.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
+  transform: rotate(90deg);
+  width: 5%;
+}
+.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn.slick-disabled {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+/* ************* */
+/*  BOOTSTRAP SM */
+/* ************* */
+/* ************* */
+/*  BOOTSTRAP MD */
+/* ************* */
+@media screen and (min-width: 768px) {
+  .wrapper#home .headline {
+    padding: 22vw 0 5vw;
+  }
+  .wrapper#home .headline::after {
+    height: 50%;
+  }
+  .wrapper#home header #carousel-home {
+    margin: 0 0;
+  }
+  .wrapper#home header #carousel-home .carousel-item {
+    padding: 0% 0 8%;
+  }
+  .wrapper#home header #carousel-home .carousel-item .carousel-caption {
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+  }
+  .wrapper#home header #carousel-home .carousel-item .carousel-caption .cta-carousel {
+    font-size: 1.75vw;
+    padding: 2% 6%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-prev,
+  .wrapper#home header #carousel-home .carousel-control-next {
+    z-index: 99999;
+  }
+  .wrapper#home header #carousel-home .carousel-control-prev img,
+  .wrapper#home header #carousel-home .carousel-control-next img {
+    width: 3vw;
+  }
+  .wrapper#home #newsletter .headline span {
+    font-size: 85%;
+  }
+  .wrapper#home #newsletter form .floating-label {
+    width: 60%;
+  }
+  .wrapper#home #newsletter form .floating-label input[type=text] {
+    font-size: 1.6vw;
+    height: 9vw;
+    margin: 4% auto;
+    padding: 5% 0;
+    transition: all 0.3s linear;
+    width: 100%;
+  }
+  .wrapper#home #newsletter form .floating-label label {
+    font-size: 2vw;
+    bottom: calc(50% + 2vw);
+  }
+  .wrapper#home #newsletter form .floating-label input:not(:placeholder-shown) + label {
+    transform: translateY(-2vw);
+    opacity: 1;
+  }
+  .wrapper#home #newsletter form button {
+    font-size: 1.75vw;
+    padding: 2% 6%;
+    margin: 6% 0 0;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha {
+    margin-bottom: 10%;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha {
+    flex-flow: column;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha h4 {
+    font-size: 2.25vw;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha .mes {
+    font-size: 2.5vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos {
+    position: relative;
+    display: inline-grid;
+    display: grid;
+    grid-auto-rows: minmax(40vw, auto);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0% 1%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow,
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+    position: absolute;
+    top: 10%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow {
+    left: 5%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+    right: 5%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
+    border: 0.5px solid white;
+    min-height: 40vw;
+    position: relative;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info {
+    width: 60%;
+    margin: 7% auto 0;
+    min-height: 30vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div {
+    margin: 0 0 15%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div h3.dia {
+    font-size: 1.7vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div h4.lugar {
+    font-size: 1.7vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion p {
+    font-size: 1.55vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn span {
+    font-size: 5vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(odd) {
+    border-left: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(even) {
+    border-right: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(-n + 2) {
+    border-top: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(n + 2) {
+    border-bottom: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .extra-info {
+    width: 60%;
+    margin: 7% auto 0;
+    min-height: 30vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .main-info {
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info {
+    opacity: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info p {
+    font-size: 1.55vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn span {
+    font-size: 5vw;
+  }
+  .wrapper#bio main {
+    background-image: url(../img/dist/bg-obra.png);
+    background-position: 50% 0%;
+    background-size: cover;
+    position: relative;
+  }
+  .wrapper#bio main::before {
+    background-color: rgba(38, 12, 12, 0.5);
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider img {
+    margin: 0 0 5%;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+    width: 10%;
+    margin: 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
+    transform: rotate(-180deg);
+    width: 100%;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
+    transform: none;
+    width: 100%;
+  }
+}
+/* ************* */
+/*  BOOTSTRAP LG */
+/* ************* */
+@media (min-width: 992px) {
+  .wrapper#home header #carousel-home .carousel-item {
+    padding: 0% 0 7%;
+  }
+}
+/* ************* */
+/*  BOOTSTRAP XL */
+/* ************* */
+@media (min-width: 1200px) {
+  .wrapper#home {
+    /*.headline {
+            padding: 12vw 0 2vw;
+        }*/
+  }
+  .wrapper#home header {
+    background-image: url(../img/dist/bg-home@3x.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8% 0;
+  }
+  .wrapper#home header #carousel-home {
+    /*-webkit-box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.6);
+                box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.6);*/
+    margin: 0% auto;
+    width: 60%;
+    z-index: 99;
+  }
+  .wrapper#home header #carousel-home .carousel-item {
+    padding: 10%;
+  }
+  .wrapper#home header #carousel-home .carousel-item .carousel-caption {
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+  }
+  .wrapper#home header #carousel-home .carousel-item .carousel-caption .cta-carousel {
+    font-size: 1vw;
+    padding: 2% 6%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-prev {
+    left: -12%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-next {
+    right: -12%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-prev img,
+  .wrapper#home header #carousel-home .carousel-control-next img {
+    width: 1.5vw;
+  }
+  .wrapper#home #instagram-feed .headline {
+    padding: 12vw 0 2vw;
+  }
+  .wrapper#home #newsletter .headline {
+    padding: 12vw 0 2vw;
+  }
+  .wrapper#home #newsletter .headline span {
+    font-size: 55%;
+  }
+  .wrapper#home #newsletter form .floating-label {
+    width: 31%;
+  }
+  .wrapper#home #newsletter form .floating-label input[type=text] {
+    font-size: 1.25vw;
+    height: 4vw;
+    margin: 4% auto 6%;
+    padding: 5% 0;
+  }
+  .wrapper#home #newsletter form .floating-label label {
+    font-size: 1.25vw;
+    bottom: calc(50% + 2vw);
+  }
+  .wrapper#home #newsletter form .floating-label input:not(:placeholder-shown) + label {
+    transform: translateY(-0.3vw);
+    opacity: 1;
+  }
+  .wrapper#home #newsletter form button {
+    font-size: 1vw;
+    padding: 1% 4%;
+    margin: 1% 0 0;
+  }
+  .wrapper#bio main {
+    background-image: url(../img/dist/bg-obra.png);
+    background-position: 50% 0%;
+    background-size: cover;
+    position: relative;
+  }
+  .wrapper#bio main::before {
+    display: none;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider img {
+    width: 80%;
+    margin: 0 0 2%;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+    width: 10%;
+    margin: 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -10vh;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
+    transform: rotate(-180deg);
+    width: 20px;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
+    transform: none;
+    width: 20px;
+  }
+  .wrapper#agenda .headline {
+    padding: 3% 0;
+  }
+  .wrapper#agenda main {
+    padding-bottom: 5%;
+  }
+  .wrapper#agenda main #navegacion {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha {
+    margin-bottom: 2%;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha {
+    flex-flow: column;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha h4 {
+    font-size: 1.25vw;
+  }
+  .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha .mes {
+    font-size: 1.5vw;
+  }
+  .wrapper#agenda main #eventos {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos {
+    position: relative;
+    display: inline-grid;
+    display: grid;
+    grid-auto-rows: minmax(min-content, auto);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0% 1%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow,
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+    position: absolute;
+    top: 10%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow {
+    left: 5%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+    right: 5%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
+    border: 0.5px solid white;
+    min-height: 20vw;
+    position: relative;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info {
+    width: 80%;
+    margin: 7% auto 0;
+    min-height: 15vw;
+    transition: all 0.5s;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div {
+    margin: 0 0 10%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div h3.dia {
+    font-size: 1.7vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion > div h4.lugar {
+    font-size: 1.7vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion p {
+    font-size: 1.25vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn {
+    right: 0;
+    bottom: -20%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn span {
+    font-size: 5vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(odd) {
+    border-left: none;
+    border-right: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(even) {
+    border-left: none;
+    border-right: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(2) {
+    border-left: 0.5px solid white;
+    border-right: 0.5px solid white;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(5) {
+    border-left: 0.5px solid white;
+    border-right: 0.5px solid white;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(-n + 4) {
+    border-top: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(n + 3) {
+    border-bottom: none;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .extra-info {
+    width: 80%;
+    margin: 7% auto 0;
+    min-height: 15vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .main-info {
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info {
+    opacity: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info p {
+    font-size: 1.25vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn {
+    right: 0;
+    bottom: -20%;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn span {
+    font-size: 5vw;
+  }
+}
+@media (min-width: 1500px) {
+  .wrapper#home header {
+    background-image: url(../img/dist/bg-home@3x.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10% 0 10%;
+  }
+  .wrapper#home header #carousel-home {
+    /*-webkit-box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.6);
+                box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.6);*/
+    margin: 0% auto 0;
+    width: 60%;
+    z-index: 99;
+  }
+  .wrapper#home header #carousel-home .carousel-item .carousel-caption {
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+  }
+  .wrapper#home header #carousel-home .carousel-item .carousel-caption .cta-carousel {
+    font-size: 1vw;
+    padding: 2% 6%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-prev {
+    left: -12%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-next {
+    right: -12%;
+  }
+  .wrapper#home header #carousel-home .carousel-control-prev img,
+  .wrapper#home header #carousel-home .carousel-control-next img {
+    width: 1.5vw;
+  }
+  .wrapper#home #newsletter .headline span {
+    font-size: 55%;
+  }
+  .wrapper#home #newsletter form .floating-label {
+    width: 31%;
+    /*input[type=text] {
+                        font-size: 1.25vw;
+                        height: 5vw;
+                        margin: 7% auto;
+                        padding: 5% 0;
+                    }*/
+    /*label {
+                        font-size: 1.25vw;
+                        bottom: calc(50% + 2vw);
+                    }*/
+  }
+  .wrapper#home #newsletter form .floating-label input:not(:placeholder-shown) + label {
+    transform: translateY(-0.3vw);
+    opacity: 1;
+  }
+  .wrapper#home #newsletter form button {
+    font-size: 1vw;
+    padding: 1.5% 5%;
+  }
+  .wrapper#bio .headline {
+    padding: 2% 0;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider img {
+    width: 90%;
+    margin: 0 0 2%;
+  }
+  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+    top: -5vh;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion p {
+    font-size: 1.1vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info p {
+    font-size: 1vw;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
+    min-height: 18vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */

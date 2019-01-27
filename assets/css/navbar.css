@@ -1,0 +1,350 @@
+/* ************* */
+
+/* BOOTSTRAP XS  */
+
+/* ************* */
+
+
+nav.navbar {
+    background-image: url(../img/dist/bg-menu@3x.png);
+    background-position: 70%;
+    background-size: cover;
+    padding: 7vw 1rem;
+    position: relative;
+}
+
+.navbar .social-media {
+    display: none;
+}
+
+.navbar .social-media-mobile {
+    display: block;
+}
+
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+/* animated hamburguer icon */
+.navbar-dark .navbar-toggler .hamburguer-icon {
+    background: #c6c6c6;
+    width: 21px;
+    height: 2px;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(1) {
+    transform: rotate(-45deg);
+}
+
+.navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(2) {
+    opacity: 0;
+}
+
+.navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -9px;
+}
+
+/* top JORGE ROJAS */
+.navbar .navbar-title {
+    color: #c6c6c6;
+    font-family: Raleway;
+    font-size: 6vw;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-align: center;
+    position: absolute;
+    /*right: 28%;*/
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*top: calc(7% + 20px);*/
+    
+}
+
+.navbar .navbar-collapse {
+    margin: 20% 0% 0%;
+}
+
+.navbar .navbar-collapse .nav-item .menu-item {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4vw;
+    letter-spacing: 4.7px;
+    text-align: center;
+    line-height: 3.57;
+}
+
+/* social media */
+.navbar .social-media {
+    margin: 10% 0;
+}
+
+.navbar .social-media ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0%;
+    margin: 0% 20%;
+}
+
+.navbar .social-media ul li {
+    list-style: none;
+    width: 32%;
+    margin: 2% 0;
+    text-align: center;
+}
+
+.navbar .social-media ul li img {
+    height: 10vw;
+}
+
+/* fin social media */
+
+.navbar .navbar-title-opened {
+    top: 10%;
+}
+
+
+/* ************* */
+
+/*  BOOTSTRAP SM */
+
+/* ************* */
+@media (min-width: 576px) {}
+
+/* ************* */
+
+/*  BOOTSTRAP MD */
+
+/* ************* */
+@media (min-width: 768px) {
+
+    nav.navbar {
+        background-position: 35%;
+        padding: 6vw 1rem;
+    }
+
+    /* animated hamburguer icon */
+    .navbar-dark .navbar-toggler .hamburguer-icon {
+        width: 21px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(1) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -9px;
+    }
+
+    /* top JORGE ROJAS */
+    .navbar .navbar-title {
+        font-size: 3.5vw;
+        letter-spacing: 0.5em;
+        /*top: calc(8% + 35px);*/
+        /*right: 30%;*/
+        
+    }
+
+    .navbar .navbar-collapse {
+        margin: 15% 0 0;
+    }
+
+    
+
+    .navbar .navbar-collapse .nav-item .menu-item {
+        font-size: 3vw;
+        letter-spacing: 10px;
+        line-height: 2.67;
+    }
+
+    /* social media */
+    .navbar .social-media {
+        margin: 0 0;
+    }
+
+    .navbar .social-media ul {
+        padding: 0%;
+        margin: 0;
+    }
+
+    .navbar .social-media ul li {
+        list-style: none;
+        width: auto;
+        margin: 2% .4rem;
+        text-align: center;
+    }
+
+    .navbar .social-media ul li img {
+        height: 3vw;
+    }
+
+    .navbar .social-media-mobile {
+        margin: 70px 30%;
+    }
+
+    /* fin social media */
+
+}
+
+/* ************* */
+
+/*  BOOTSTRAP LG */
+
+/* ************* */
+@media (min-width: 992px) {}
+
+/* ************* */
+
+/*  BOOTSTRAP XL */
+
+/* ************* */
+@media (min-width: 1200px) {
+
+    .navbar-nav {
+        margin-bottom: 30vh;
+    }
+
+    nav.navbar {
+        background-position: 35%;
+        padding: 30px 1rem;
+    }
+
+    .navbar .social-media {
+        display: block;
+        position: relative;
+        margin: 0%;
+        right: 0;
+        /*top: 50%;
+        transform: translateY(-50%);*/
+    }
+
+    .navbar .social-media ul {
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navbar .social-media ul li {
+        list-style: none;
+        width: auto;
+        margin: 0% 5%;
+        text-align: center;
+    }
+
+    .navbar .social-media ul li img {
+        height: 4vw;
+        max-height: 25px;
+    }
+
+    /* animated hamburguer icon */
+    .navbar-dark .navbar-toggler .hamburguer-icon {
+        width: 21px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(1) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-dark .navbar-toggler:not(.collapsed) .hamburguer-icon:nth-of-type(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -9px;
+    }
+
+    /* top JORGE ROJAS */
+    .navbar .navbar-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        /*top: calc(6% + 22px);*/
+        
+    }
+
+    .navbar .navbar-collapse {
+        margin: 7% 0;
+    }
+
+    .navbar .navbar-collapse .nav-item .menu-item {
+        font-size: 2.5vw;
+        letter-spacing: 10px;
+        line-height: 2;
+    }
+
+    /* social media second level */
+    .navbar .navbar-collapse .social-media {
+        display: none;
+    }
+
+    /* fin social media */
+
+    .navbar .navbar-title-opened {
+        width: 600px;
+        height: 61px;
+        font-size: 2.5vw;
+        font-weight: 700;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 16px;
+        color: #ffffff;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    nav.navbar {
+        background-position: 35%;
+        padding: 35px 1rem;
+    }
+
+    .navbar .navbar-title {
+        /*font-size: 2.5vw;*/
+        letter-spacing: 2px;
+        /*top: calc(8% + 35px);*/
+        /*right: 41%;*/
+        left: 50%;
+        
+    }
+
+    .navbar .social-media {
+        display: block;
+        
+    }
+
+
+    .navbar .navbar-collapse {
+        margin: 11% 0 10%;
+    }
+
+    .navbar .navbar-collapse .nav-item .menu-item {
+        font-size: 2vw;
+        letter-spacing: 10px;
+        line-height: 2;
+    }
+
+
+    .navbar .navbar-title-opened {
+        letter-spacing: 16px;
+    }
+
+
+}/*media*/
