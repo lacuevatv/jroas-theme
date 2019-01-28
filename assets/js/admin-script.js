@@ -1,6 +1,6 @@
 jQuery(function($){
     
-    $(document).on( 'click', '.upload-logo-uk', function( event ){
+    /*$(document).on( 'click', '.upload-logo-uk', function( event ){
 
         event.preventDefault();
         //variables:
@@ -27,7 +27,7 @@ jQuery(function($){
 
         // Finally, open the modal on click
         frame.open();
-    });
+    });*/
 
     $(document).on( 'click', '.upload-images', function( event ){
 
@@ -58,17 +58,7 @@ jQuery(function($){
         frame.open();
     });
 
-    //metaboxes: checkbox
-    /*$('.input-checkbox').click(function(){
-        $(this).attr
-        if ( $(this).attr('checked') == 'checked' ) {
-            $(this).val('1');
-        } else {
-            $(this).val('0');
-        }
-    });*/
- 
-
+    
     //SUBE MUCHAS IMAGENES PARA LA GALERÍA
     $(document).on( 'click', '.upload-imagenes', function( event ){
 
@@ -162,14 +152,11 @@ jQuery(function($){
 
     }//updateGaleriaPreview()
 
-    
-    
-
 
     //guarda los cursos en un input al ser seleccionados
     $(document).on('click', '.input_cursos', function(e) {
         var idCurso = $(this).attr('data-id');
-        var inputCursos = $('#cursos_id');
+        var inputCursos = $('input[name="jrojas_canciones"]');
         var cursosValores = $(inputCursos).val();
         if ( $(this).attr('checked') ) {
             //si es chequeado se agrega al inputCursos
@@ -192,56 +179,106 @@ jQuery(function($){
     });
 
 
-    //guarda los destinos en un input al ser seleccionados
-    $(document).on('click', '.input_destinos', function(e) {
-        var idDestino = $(this).attr('data-id');
-        var inputDestinos = $('#destinos_id');
-        var destinosValores = $(inputDestinos).val();
-        if ( $(this).attr('checked') ) {
-            //si es chequeado se agrega al inputCursos
 
-            //busca a ver si ya esta agregado y si esta no hace nada
-            if ( destinosValores.indexOf(idDestino) == '-1' ) {
-                destinosValores = destinosValores + idDestino + ',';
-            }
+    //canciones en obras
+    //ordenar
+    $( '.lista-canciones' ).sortable({
+		stop: function () {
+            console.log('stop')
+            //borramos
+            //ordenIds = '';
 
-        } else {
-            //Si se desmarca hay que borrarlo
-            
-            if ( destinosValores.indexOf(idDestino) != '-1' ) {
-                destinosValores = destinosValores.replace( idDestino+',' , '' );
-            }
-
-        }
-
-        $(inputDestinos).val(destinosValores);
-    }); 
+            reordenar();
+			
+		},
+    });
+    $( '.lista-canciones' ).disableSelection();
     
-    
-    //guarda los programas en un input al ser seleccionados
-    $(document).on('click', '.input_programas', function(e) {
+     //borrar una canción
+     $(document).on('click', '.del-cancion', function(e) {
+        var li = $(this).closest('li');
+        var text = $($(li).find('.name-cancion')).text();
+        console.log(text)
+        li.remove();
+
+        reordenar();
+    });
+
+    //al escribir el input se guarda el nombre de la canción
+    $(document).on('keyup', '.name-cancion', function(e) {
+        guardarCanciones();
+    });
+
+    //agregar cancion
+    $(document).on('click', '.agregar-cancion', function(e) {
+        agregar('');
+
+        reordenar();
+    });
+
+    //carga la lista de canciones al inicio si hay algunas
+    $(document).ready( function(e) {
+
+        var inputHidden = $('#jrojas_canciones');
+        var canciones = $(inputHidden).val();
         
-        var idPrograma = $(this).attr('data-id');
-        var inputProgramas = $('#home_programas_id');
-        var programasValores = $(inputProgramas).val();
-        if ( $(this).attr('checked') ) {
-            //si es chequeado se agrega al inputCursos
+        if (canciones != '') {
+            var arrayCanciones = canciones.split('_');
 
-            //busca a ver si ya esta agregado y si esta no hace nada
-            if ( programasValores.indexOf(idPrograma) == '-1' ) {
-                programasValores = programasValores + idPrograma + ',';
+            for (i = 0; i < arrayCanciones.length; i++) {
+                agregar(arrayCanciones[i]);
             }
+
+            reordenar();
 
         } else {
-            //Si se desmarca hay que borrarlo
-            
-            if ( programasValores.indexOf(idPrograma) != '-1' ) {
-                programasValores = programasValores.replace( idPrograma+',' , '' );
-            }
+            console.log('no hay canciones')
+        }
+    });
+    
+    //carga las canciones si hay alguna
 
+
+    //FUNCION guarda canciones en input
+    function guardarCanciones() {
+        var inputHidden = $('#jrojas_canciones');
+        var cancionesOld = $(inputHidden).val();
+        var cancionesNew = '';
+        var lista = $( '.lista-canciones li .name-cancion' );
+
+        for (i = 0; i < lista.length; i++) {
+            cancionesNew += $(lista[i]).val();
+            
+            if ( i+1 != lista.length ) {
+                cancionesNew+= '_';
+            }
         }
 
-        $(inputProgramas).val(programasValores);
-    }); 
+        $(inputHidden).val(cancionesNew);
+
+    }
+
+    //FUNCION reordena y luego vuelve a guardar
+    function reordenar()  {
+        var li = $('.lista-canciones li');
+			for (var i = 0; i < li.length; i++) {
+                $(li[i]).find('.ordinal').text(i+1)
+            }
+            
+            guardarCanciones();
+    }
+
+   
+    //FUNCION agrega una cancion nueva y reordena
+    function agregar(valor) {
+        console.log(valor)
+        var contenedor = $( '.lista-canciones' );
+        var html = '<li><span class="ordinal">#</span>. <input name="name-cancion" type="text" class="name-cancion" value="'+valor+'"><button type="button" title="borrar canción" class="del-cancion"></button></li>';
+        $(contenedor).append($(html));
+
+        $( '.lista-canciones li input' )[$( '.lista-canciones li input' ).length-1].focus();
+
+        //reordenar();
+    }
 
 });

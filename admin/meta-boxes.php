@@ -429,7 +429,8 @@ if ( ! function_exists( 'jrojas_add_metabox_obras_callback' ) ) {
     function jrojas_add_metabox_obras_callback( WP_Post $post ) {
         wp_nonce_field( 'jrojas_obras', 'jrojas_obras_nonce' );
 
-        $metaobras = get_post_meta( $post->ID, '_jrojas_obras', true );
+		$metaobras = get_post_meta( $post->ID, '_jrojas_obras', true );
+		var_dump($metaobras[5]);
         ?>
 
         <div class="jrojas_metabox_wrapper">
@@ -471,8 +472,20 @@ if ( ! function_exists( 'jrojas_add_metabox_obras_callback' ) ) {
 				</div>
 
 				<div class="metabox_input_data">
-					<input type="hidden" name="jrojas_canciones" id="jrojas_canciones" value="<?php echo isset($metaobras[5]) ? esc_attr( $metaobras[5]) : ''; ?>"/>
-	            </div>
+					<input type="hidden" name="jrojas_canciones" id="jrojas_canciones" value="<?php echo isset($metaobras[5]) ?  esc_attr($metaobras[5]) : ''; ?>"/>
+				</div>
+				
+				<div class="wrapper-galeria-admin-metabox">
+					<button type="button" class="button-primary agregar-cancion">
+						Agregar canción
+					</button>
+					<p><small>
+						Para ordenar las canciones arrastre los elementos.
+					</small></p>
+					<ul class="lista-canciones">
+					</ul>
+				</div>
+
 			</div>
 
         </div>
@@ -529,7 +542,7 @@ if ( ! function_exists( 'jrojas_save_metabox_obras' ) ) {
 		array_push($dataObras, esc_url( $_POST['jrojas_url_spotify'] ) );
 		array_push($dataObras, esc_url( $_POST['jrojas_url_apple'] ) );
 		array_push($dataObras, esc_url( $_POST['jrojas_imagen_disco'] ) );
-		array_push($dataObras, sanitize_text_field( $_POST['jrojas_canciones'] ) );
+		array_push($dataObras, $_POST['jrojas_canciones'] );
 		
         if ( ! empty( $dataObras ) ) {
         	update_post_meta( $post_id, '_jrojas_obras', $dataObras );

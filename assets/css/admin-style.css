@@ -236,4 +236,35 @@ justify-content: space-between;
   opacity: 0.7;
 }
 
-/*# sourceMappingURL=admin-style.css.map */
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .lista-canciones {
+  margin: 2.5rem 0 1rem;
+  padding-left: 1rem;
+}
+
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .lista-canciones li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .lista-canciones li .del-cancion {
+  background: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  background-image: url(../images/icon-delete.png);
+  margin-left: .5rem;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15px;
+  width: 15px;
+}
+
+.jrojas_metabox_wrapper .jrojas_metabox_input_data_wrapper .wrapper-galeria-admin-metabox .lista-canciones li .del-cancion:hover {
+  opacity: 0.7;
+}
+
+input.name-cancion {
+  width: 60%;
+}

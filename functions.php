@@ -181,7 +181,7 @@ if ( ! function_exists( 'jrojas_wp_admin_style_scripts' ) ) {
 		
 		//agregar el paquete de media para usar la api
 		wp_enqueue_media();
-
+		wp_enqueue_script( 'jquery ui', get_template_directory_uri() . '/assets/js/jquery-ui.min.js', array('jquery'), '1.0', true );
         wp_enqueue_script( 'jrojas-admin-script', get_template_directory_uri() . '/assets/js/admin-script.js', array('jquery'), '1.0', true );
 		
 	}
