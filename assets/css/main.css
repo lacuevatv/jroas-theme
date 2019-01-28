@@ -1,6 +1,42 @@
 /*************/
 /* Variables */
 /*************/
+/*--------------------------------------------------------------
+2.0 Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
 /*********/
 /* Fonts */
 /*********/
@@ -175,7 +211,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 768px) {
   .wrapper-page-contacto {
-    background-image: url(../img/dist/bgd-noticias.png);
+    background-image: url(../images/bgd-noticias.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 71px 15% 100px;
@@ -183,7 +219,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-contacto {
-    background-image: url(../img/dist/bgd-noticias@2x.png);
+    background-image: url(../images/bgd-noticias@2x.png);
     background-size: cover;
   }
 }
@@ -198,13 +234,13 @@ footer .data-fiscal img {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-image: url(../img/dist/bgd-noticias-pc.png);
+    background-image: url(../images/bgd-noticias-pc.png);
     background-size: cover;
   }
 }
 @media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-contacto {
-    background-image: url(../img/dist/bgd-noticias-pc@2x.png);
+    background-image: url(../images/bgd-noticias-pc@2x.png);
     background-size: cover;
   }
 }
@@ -215,7 +251,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1500px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-contacto {
-    background-image: url(../img/dist/bgd-noticias-pc@2x.png);
+    background-image: url(../images/bgd-noticias-pc@2x.png);
     background-size: cover;
   }
 }
@@ -612,12 +648,12 @@ footer .data-fiscal img {
   height: 38px;
   transform: rotate(90deg);
   background-repeat: no-repeat;
-  background-image: url(../img/dist/arrow-next.png);
+  background-image: url(../images/arrow-next.png);
   background-size: 21px 38px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .wrapper-page-novedades .wrapper-novedades .load-more-btn-wrapper .load-more-btn {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 21px 38px;
   }
 }
@@ -675,12 +711,12 @@ footer .data-fiscal img {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 111;
-  background-image: url(../img/dist/arrow-prev.png);
+  background-image: url(../images/arrow-prev.png);
   background-size: 19px 35px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -695,7 +731,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 992px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -706,7 +742,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1600px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -721,12 +757,12 @@ footer .data-fiscal img {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 111;
-  background-image: url(../img/dist/arrow-next.png);
+  background-image: url(../images/arrow-next.png);
   background-size: 19px 35px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -741,7 +777,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 992px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -752,7 +788,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1500px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1154,12 +1190,12 @@ footer .data-fiscal img {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 111;
-  background-image: url(../img/dist/arrow-prev.png);
+  background-image: url(../images/arrow-prev.png);
   background-size: 19px 35px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1170,7 +1206,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1185,7 +1221,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 992px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1196,7 +1232,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1600px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-prev {
-    background-image: url(../img/dist/arrow-prev@2x.png);
+    background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1211,12 +1247,12 @@ footer .data-fiscal img {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 111;
-  background-image: url(../img/dist/arrow-next.png);
+  background-image: url(../images/arrow-next.png);
   background-size: 19px 35px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1231,7 +1267,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1242,7 +1278,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 992px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 992px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }
@@ -1253,7 +1289,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1600px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-obra .slider-wrapper-obra .header-slider .slick-next {
-    background-image: url(../img/dist/arrow-next@2x.png);
+    background-image: url(../images/arrow-next@2x.png);
     background-size: 19px 35px;
   }
 }

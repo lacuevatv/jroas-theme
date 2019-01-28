@@ -11,28 +11,70 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<li class="novedad" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
 		<?php
-		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'jrojas' ) );
-		}
 		if ( is_singular() ) :
+			echo '<header class="entry-header">';
 			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+			echo '	</header><!-- .entry-header -->';
 		endif;
 		?>
-	</header><!-- .entry-header -->
 
-	<?php the_post_thumbnail(); ?>
+	<div class="titulo-novedad-mobil">
+		<h5 class="fecha-novedad">
+			<?php jrojas_posted_on(); ?>
+		</h5>
+		<?php the_title( '<h2 class="titulo-novedad">', '</h2>' ); ?>
+		
+	</div>
 
-	<div class="entry-content">
+	<div class="imagen-novedad">
+		<?php 
+		if ( has_post_thumbnail()) {
+			echo '<img src="' . get_the_post_thumbnail_url(null, 'full') . '" alt="imagen-novedad">';
+		} else { ?>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-image.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/default-image@2x.png 2x" alt="imagen-novedad">
+		<?php } ?>
+		
+	</div>                     
+
+	<div class="data-novedad">
+		<div class="titulo-pc">
+			<h5 class="fecha-novedad">
+				<?php jrojas_posted_on(); ?>
+			</h5>
+			<?php the_title( '<h2 class="titulo-novedad">', '</h2>' ); ?>
+		</div>
+
 		<?php
 		the_content(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Seguir leyendo<span class="screen-reader-text"> "%s"</span>', 'jrojas' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
+		?>
+
+		<a href="<?php echo esc_url( get_permalink() ); ?>" target="_blank" class="link-novedad">
+			Leer más
+		</a>
+	</div>
+
+	<?php //the_post_thumbnail(); ?>
+
+	<div class="entry-content">
+		<?php
+		/*the_content(
+			sprintf(
+				wp_kses(
 					__( 'Seguir leyendo<span class="screen-reader-text"> "%s"</span>', 'jrojas' ),
 					array(
 						'span' => array(
@@ -49,11 +91,9 @@
 				'before' => '<div class="page-links">' . __( 'Pages:', 'jrojas' ),
 				'after'  => '</div>',
 			)
-		);
+		);*/
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php jrojas_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-${ID} -->
+	
+</li><!-- #post-${ID} -->

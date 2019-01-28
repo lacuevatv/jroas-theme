@@ -100,7 +100,7 @@
   background-color: #16113f;
 }
 .wrapper#agenda main {
-  background-image: url(../img/dist/bg-agenda@2x.png);
+  background-image: url(../images/bg-agenda@2x.png);
   background-size: cover;
   background-position: 0% 0%;
   background-repeat: no-repeat;
@@ -425,7 +425,7 @@
     font-size: 5vw;
   }
   .wrapper#bio main {
-    background-image: url(../img/dist/bg-obra.png);
+    background-image: url(../images/bg-obra.png);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
@@ -485,7 +485,7 @@
         }*/
   }
   .wrapper#home header {
-    background-image: url(../img/dist/bg-home@3x.png);
+    background-image: url(../images/bg-home@3x.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -553,7 +553,7 @@
     margin: 1% 0 0;
   }
   .wrapper#bio main {
-    background-image: url(../img/dist/bg-obra.png);
+    background-image: url(../images/bg-obra.png);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
@@ -720,7 +720,7 @@
 }
 @media (min-width: 1500px) {
   .wrapper#home header {
-    background-image: url(../img/dist/bg-home@3x.png);
+    background-image: url(../images/bg-home@3x.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

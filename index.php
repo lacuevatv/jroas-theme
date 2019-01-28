@@ -18,15 +18,25 @@
 get_header(); ?>
 
 <section id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="wrapper-page-novedades">
+			<header class="header-page">
+                <h1>
+                    Novedades
+                </h1>
+            </header>
+            
+            <div class="wrapper-novedades container-fluid">
+                <ul class="row novedades list-unstyled">
 
 		<?php
 		if ( have_posts() ) {
 
 			// Load posts loop.
 			while ( have_posts() ) {
+				//echo '<li>';
 				the_post();
 				get_template_part( 'template-parts/content' );
+				//echo '</li>';
 			}
 
 			// Previous/next page navigation.
@@ -39,6 +49,9 @@ get_header(); ?>
 
 		}
 		?>
+
+				</ul>
+			</div>
 
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->

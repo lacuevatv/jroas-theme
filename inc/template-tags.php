@@ -16,14 +16,16 @@ if ( ! function_exists( 'jrojas_posted_on' ) ) :
 function jrojas_posted_on() {
 
 	// Get the author name; wrap it in a link.
-	$byline = sprintf(
+	/*$byline = sprintf(
 		/* translators: %s: post author */
-		__( 'by %s', 'jrojas' ),
+		/*__( 'by %s', 'jrojas' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
-	);
+	);*/
 
 	// Finally, let's write all of this to the page.
-	echo '<span class="posted-on">' . jrojas_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+	/*echo '<span class="posted-on">' . jrojas_time_link() . '</span><span class="byline"> ' . $byline . '</span>';*/
+
+	echo jrojas_time_link();
 }
 endif;
 
@@ -34,22 +36,21 @@ if ( ! function_exists( 'jrojas_time_link' ) ) :
  */
 function jrojas_time_link() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+	/*if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
+	}*/
 
 	$time_string = sprintf( $time_string,
 		get_the_date( DATE_W3C ),
-		get_the_date(),
-		get_the_modified_date( DATE_W3C ),
-		get_the_modified_date()
+		get_the_date( 'j F Y')
+		/*get_the_modified_date( DATE_W3C ),
+		get_the_modified_date()*/
 	);
 
 	// Wrap the time string in a link, and preface it with 'Posted on'.
 	return sprintf(
 		/* translators: %s: post date */
-		__( '<span class="screen-reader-text">Publicado el</span> %s', 'jrojas' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		__( '<span class="screen-reader-text">Publicado el</span> %s', 'jrojas' ), $time_string 
 	);
 }
 endif;
@@ -93,7 +94,7 @@ function jrojas_entry_footer() {
 				}
 			}
 
-			jrojas_edit_link();
+			//jrojas_edit_link();
 
 		echo '</footer> <!-- .entry-footer -->';
 	}
