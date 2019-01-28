@@ -160,8 +160,8 @@ var jorgeRojas = (function () {
 			vertical:true,
 			verticalSwiping: true,
 			arrows: true,
-			prevArrow: '<button class="scroll-btn"><img class="prev-arrow" src="../img/dist/arrow-next.png" alt="Flecha para scroll"></button>',
-			nextArrow: '<button class="scroll-btn"><img class="next-arrow" src="../img/dist/arrow-next.png" alt="Flecha para scroll"></button>',
+			prevArrow: '<button class="scroll-btn"><img class="prev-arrow" src="../images/arrow-next.png" alt="Flecha para scroll"></button>',
+			nextArrow: '<button class="scroll-btn"><img class="next-arrow" src="../images/arrow-next.png" alt="Flecha para scroll"></button>',
 			mobileFirst: true,
 			responsive: [
 				{

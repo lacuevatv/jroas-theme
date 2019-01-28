@@ -233,39 +233,39 @@
   font-size: 10vw;
   text-align: center;
 }
-.wrapper#bio main {
+.wrapper .page-default main {
   background-color: #16113f;
 }
-.wrapper#bio main .col-text .row .biografia-slider p {
+.wrapper .page-default main .col-text .row .biografia-slider p {
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.5;
 }
-.wrapper#bio main .col-text .row .biografia-slider p span {
+.wrapper .page-default main .col-text .row .biografia-slider p span {
   display: block;
   font-weight: bold;
 }
-.wrapper#bio main .col-text .row .biografia-slider img {
+.wrapper .page-default main .col-text .row .biografia-slider img {
   margin: 0 0 5%;
 }
-.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+.wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn {
   transition: all 0.5s linear;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
+.wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
   transform: rotate(-90deg);
   width: 5%;
 }
-.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
+.wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
   transform: rotate(90deg);
   width: 5%;
 }
-.wrapper#bio main .col-text .row .biografia-slider button.scroll-btn.slick-disabled {
+.wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn.slick-disabled {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -424,13 +424,13 @@
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn span {
     font-size: 5vw;
   }
-  .wrapper#bio main {
+  .wrapper .page-default main {
     background-image: url(../images/bg-obra.png);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
   }
-  .wrapper#bio main::before {
+  .wrapper .page-default main::before {
     background-color: rgba(38, 12, 12, 0.5);
     width: 100%;
     height: 100%;
@@ -439,30 +439,30 @@
     top: 0;
     z-index: 0;
   }
-  .wrapper#bio main .col-text .row .biografia-slider {
+  .wrapper .page-default main .col-text .row .biografia-slider {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
   }
-  .wrapper#bio main .col-text .row .biografia-slider p {
+  .wrapper .page-default main .col-text .row .biografia-slider p {
     font-size: 16px;
     line-height: 1.5;
   }
-  .wrapper#bio main .col-text .row .biografia-slider img {
+  .wrapper .page-default main .col-text .row .biografia-slider img {
     margin: 0 0 5%;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn {
     width: 10%;
     margin: 0 3%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
     transform: rotate(-180deg);
     width: 100%;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
     transform: none;
     width: 100%;
   }
@@ -552,29 +552,29 @@
     padding: 1% 4%;
     margin: 1% 0 0;
   }
-  .wrapper#bio main {
+  .wrapper .page-default main {
     background-image: url(../images/bg-obra.png);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
   }
-  .wrapper#bio main::before {
+  .wrapper .page-default main::before {
     display: none;
   }
-  .wrapper#bio main .col-text .row .biografia-slider {
+  .wrapper .page-default main .col-text .row .biografia-slider {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
   }
-  .wrapper#bio main .col-text .row .biografia-slider p {
+  .wrapper .page-default main .col-text .row .biografia-slider p {
     font-size: 14px;
     line-height: 1.5;
   }
-  .wrapper#bio main .col-text .row .biografia-slider img {
+  .wrapper .page-default main .col-text .row .biografia-slider img {
     width: 80%;
     margin: 0 0 2%;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn {
     width: 10%;
     margin: 0 3%;
     display: flex;
@@ -583,11 +583,11 @@
     position: relative;
     top: -10vh;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn img.prev-arrow {
     transform: rotate(-180deg);
     width: 20px;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn img.next-arrow {
     transform: none;
     width: 20px;
   }
@@ -777,18 +777,18 @@
     font-size: 1vw;
     padding: 1.5% 5%;
   }
-  .wrapper#bio .headline {
+  .wrapper .page-default .headline {
     padding: 2% 0;
   }
-  .wrapper#bio main .col-text .row .biografia-slider p {
+  .wrapper .page-default main .col-text .row .biografia-slider p {
     font-size: 16px;
     line-height: 1.5;
   }
-  .wrapper#bio main .col-text .row .biografia-slider img {
+  .wrapper .page-default main .col-text .row .biografia-slider img {
     width: 90%;
     margin: 0 0 2%;
   }
-  .wrapper#bio main .col-text .row .biografia-slider button.scroll-btn {
+  .wrapper .page-default main .col-text .row .biografia-slider button.scroll-btn {
     top: -5vh;
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .descripcion p {

@@ -17,7 +17,7 @@
 
 get_header(); ?>
 
-<section id="primary" class="content-area">
+	<section id="primary" class="content-area">
 		<main id="main" class="wrapper-page-novedades">
 			<header class="header-page">
                 <h1>

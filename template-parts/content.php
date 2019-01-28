@@ -32,12 +32,13 @@
 	<div class="imagen-novedad">
 		<?php 
 		if ( has_post_thumbnail()) {
-			echo '<img src="' . get_the_post_thumbnail_url(null, 'full') . '" alt="imagen-novedad">';
+			
+			the_post_thumbnail();
+			
 		} else { ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-image.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/default-image@2x.png 2x" alt="imagen-novedad">
 		<?php } ?>
-		
-	</div>                     
+	</div>
 
 	<div class="data-novedad">
 		<div class="titulo-pc">
@@ -63,7 +64,7 @@
 		);
 		?>
 
-		<a href="<?php echo esc_url( get_permalink() ); ?>" target="_blank" class="link-novedad">
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="link-novedad">
 			Leer más
 		</a>
 	</div>

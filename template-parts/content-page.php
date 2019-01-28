@@ -11,78 +11,22 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<main class="wrapper" id="bio">
 
-	<?php if ( ! is_page() ) : ?>
-	
-	<div class="entry-meta">
-		<?php jrojas_posted_by(); ?>
-		<?php jrojas_posted_on(); ?>
-		<span class="comment-count">
-			<?php
-			if ( ! empty( $discussion ) ) {
-				jrojas_discussion_avatars_list( $discussion->authors );
-			}
-			?>
-			<?php jrojas_comment_count(); ?>
-		</span>
-		<?php
-		// Edit post link.
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'jrojas' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">' . jrojas_get_icon_svg( 'edit', 16 ),
-				'</span>'
-			);
-		?>
-	</div><!-- .meta-info -->
-	<?php endif; ?>
+		<?php the_title( '<div class="headline"><h2 class="entry-title">', '</h2></div>' ); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+		
+			<div class="col-text container-fluid">
+                <div class="row">
+                    <div class="biografia-slider col-sm-12 col-md-10 offset-md-1 col-xl-5 offset-xl-5">
+                        <div class="mx-2">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'jrojas' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Editar <span class="screen-reader-text">%s</span>', 'jrojas' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+	</main>
+</div><!-- #post-<?php the_ID(); ?> -->
