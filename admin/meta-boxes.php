@@ -439,7 +439,7 @@ if ( ! function_exists( 'jrojas_add_metabox_obras_callback' ) ) {
         wp_nonce_field( 'jrojas_obras', 'jrojas_obras_nonce' );
 
 		$metaobras = get_post_meta( $post->ID, '_jrojas_obras', true );
-		var_dump($metaobras[5]);
+		
         ?>
 
         <div class="jrojas_metabox_wrapper">
