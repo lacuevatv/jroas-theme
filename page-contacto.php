@@ -18,9 +18,6 @@ get_header(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post(); ?>
-
-		
-		
 	
 			<?php the_title( '<header class="header-page"><h1 class="entry-title">', '</h1></header>' ); ?>
 			

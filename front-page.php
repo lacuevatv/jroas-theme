@@ -49,7 +49,7 @@ get_header(); ?>
 							$metaSlider = get_post_meta( $post->ID, '_jrojas_sliders', true ); ?>
 
 								<div class="carousel-item<?php echo $active; ?>">
-									<img class="d-block w-100" src="<?php echo $metaSlider[3]; ?>" alt="First slide">
+									<img class="d-block w-100" src="<?php echo esc_url( $metaSlider[3] ); ?>" alt="First slide">
 									<div class="carousel-caption">
 										<a href="<?php echo $metaSlider[0]; ?>" class="cta cta-carousel" <?php if ( $metaSlider[2] == 'on' ) { echo 'target="_blank"'; }?>>
 											<?php echo $metaSlider[1]; ?>
@@ -73,38 +73,8 @@ get_header(); ?>
 				</div>
 				<?php endif; ?>
 
-				
-					<!--<div id="carousel-home" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/carousel-slide-1.png" alt="First slide">
-								<div class="carousel-caption">
-									<a href="" class="cta cta-carousel"> Ver más</a>
-								</div>
-							</div>
-						<div class="carousel-item"> 
-								<img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/carousel-slide-1.png" alt="Second slide">
-								<div class="carousel-caption">
-									<a href="" class="cta cta-carousel"> Ver más</a>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/carousel-slide-1.png" alt="Third slide">
-								<div class="carousel-caption">
-									<a href="" role="button" class="cta cta-carousel"> Ver más</a>
-								</div>
-							</div> 
-						</div>
-						<a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-prev.png" aria-hidden="true" alt="Flecha hacia la izquierda">
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-next.png" aria-hidden="true" alt="Flecha hacia la izquierda">
-							<span class="sr-only">Next</span>
-						</a>
-					</div>-->
 				</header>
+				
 				<section id="instagram-feed">
 					<div class="headline">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram-hl.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/instagram-hl@2x.png 2x,

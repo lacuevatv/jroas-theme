@@ -268,8 +268,7 @@ require_once get_template_directory() . '/admin/ajax.php';
  * por ejemplo, mostrar metaboxes específicos
  */
 
-
-/*if ( ! function_exists( 'uk_get_meta_info_resumen' ) ) {
+if ( ! function_exists( 'jr_getDataVideo' ) ) {
 	/**
 	 * muestra los meta info resumenes de destinos, cursos y alojamientos
 	 *
@@ -277,70 +276,16 @@ require_once get_template_directory() . '/admin/ajax.php';
 	 *
 	 * @uses get_post_meta()
 	 */
-	/*function uk_get_meta_info_resumen($id) {
-		
-		$metaInfoResumen = get_post_meta( $id, '_uk_meta_info_resumen', true );
-		if ( ( is_array($metaInfoResumen) && !empty($metaInfoResumen) ) || $metaInfoResumen != '' ) :
-			ob_start();
-			?>
-			<div class="meta-resumen-single-post-wrapper">
-				<ul class="meta-resumen-list">
-					<?php 
-					if ( ! is_array($metaInfoResumen) ) {
-
-						echo '<li>'.$metaInfoResumen.'</li>';
-
-					} else {
-
-						foreach ($metaInfoResumen as $info) {
-							if ($info != '') {
-								echo '<li>'.$info.'</li>';
-							}	
-						}
-					}
-					?>
-				</ul>
-			</div>
-			
-			<?php
-			$metaInfoHtml = ob_get_contents();
-			ob_clean();
-			return $metaInfoHtml;
-		endif; 
-	}
-}*/
-
-/*if ( ! function_exists( 'acortaTexto' ) ) {
-	/**
-	 * Recorta el texto por palabras
-	 *
-	 * @since 1.0
-	 */
-	/*function acortaTexto( $texto, $cantPalabras = 50, $final = null ) {
-		if ( null === $final ) {
-		$final = '&hellip;';
-		}	
-		$textoOriginal = $texto;
-		
-		//quitar html
-		$texto = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $texto );
-		$texto = strip_tags($texto);
-		
-		//reducir texto y agregar el final
-		$words_array = preg_split( "/[\n\r\t ]+/", $texto, $cantPalabras + 1, PREG_SPLIT_NO_EMPTY );
-		$sep = ' ';
-		
-		//devolver texto reducido
-		if ( count( $words_array ) > $cantPalabras ) {
-			array_pop( $words_array );
-			$texto = implode( $sep, $words_array );
-			$texto = $texto . $final;
+	function jr_getDataVideo($link) {
+		if ( $link != '' && strpos($link, '=') === false ) {
+			$codigo = explode('/',$link)[3];
 		} else {
-			$texto = implode( $sep, $words_array );
+			$codigo = explode('=',$link)[1];
 		}
-		return $texto;
+
+		return $codigo;
 	}
-}*/
+}
 
 
 /*if ( ! function_exists( 'dispositivo' ) ) {

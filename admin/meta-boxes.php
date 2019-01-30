@@ -210,7 +210,14 @@ if ( ! function_exists( 'jrojas_add_metabox_galeria_callback' ) ) {
 	            	<label for="jrojas_imagen_galeria">
 						<?php esc_html_e( 'Imagen', 'jrojas' ); ?>
 					</label>
-					<input type="text" name="jrojas_imagen_galeria" id="jrojas_url_galeria" value="<?php echo isset($metagaleria[1]) ? esc_attr( $metagaleria[1]) : ''; ?>"/>
+					<input type="text" name="jrojas_imagen_galeria" id="jrojas_imagen_galeria" value="<?php echo isset($metagaleria[1]) ? esc_attr( $metagaleria[1]) : ''; ?>"/>
+					<button type="button" class="upload-images button-primary">Agregar imagen</button>		
+				</div>
+				<div class="metabox_input_data">
+	            	<label for="jrojas_imagen_miniatura">
+						<?php esc_html_e( 'Miniatura (opcional para video)', 'jrojas' ); ?>
+					</label>
+					<input type="text" name="jrojas_imagen_miniatura" id="jrojas_imagen_miniatura" value="<?php echo isset($metagaleria[2]) ? esc_attr( $metagaleria[2]) : ''; ?>"/>
 					<button type="button" class="upload-images button-primary">Agregar imagen</button>		
 				</div>
             </div>
@@ -233,7 +240,8 @@ if ( ! function_exists( 'jrojas_save_metabox_galeria' ) ) {
     function jrojas_save_metabox_galeria( $post_id, WP_Post $post ) {
         // Si no se reciben los datos o no hay ninguno, salir de la función.
 		$dato1 = isset( $_POST['jrojas_url_galeria'] ) ? 1 : 0;
-		$dato2 = isset( $_POST['jrojas_btn_galeria'] ) ? 1 : 0;
+		$dato2 = isset( $_POST['jrojas_imagen_galeria'] ) ? 1 : 0;
+		$dato3 = isset( $_POST['jrojas_imagen_miniatura'] ) ? 1 : 0;
 		$datos_sumados = $dato1 + $dato2;
 		
 		if ( $datos_sumados == 0  ) {
@@ -261,6 +269,7 @@ if ( ! function_exists( 'jrojas_save_metabox_galeria' ) ) {
 		$dataSlider = array();
 		array_push($dataSlider, esc_url( $_POST['jrojas_url_galeria'] ) );
 		array_push($dataSlider, esc_url( $_POST['jrojas_imagen_galeria'] ) );
+		array_push($dataSlider, esc_url( $_POST['jrojas_imagen_miniatura'] ) );
 		
         if ( ! empty( $dataSlider ) ) {
         	update_post_meta( $post_id, '_jrojas_galeria', $dataSlider );
