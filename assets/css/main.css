@@ -203,12 +203,42 @@ footer .data-fiscal {
 footer .data-fiscal img {
   width: 10%;
 }
+
+.wrapper-content-wp strong {
+  font-weight: bold;
+}
+
+.wrapper-content-wp em {
+  font-style: italic;
+}
+
+.wrapper-content-wp a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+
 /* **** CONTACTO ********* */
 .wrapper-page-contacto {
   background-color: #16113f;
   color: #fff;
   padding: 30px 0;
 }
+
+.msj-formulario {
+  font-size: 80%;
+  margin-right: 10%;
+  letter-spacing: .5px;
+}
+
+.msj-formulario-home {
+  margin-right: 10%;
+  text-align:center;
+  color:#fff;
+  width: 100%;
+  display: none;
+}
+
 @media (min-width: 768px) {
   .wrapper-page-contacto {
     background-image: url(../images/bgd-noticias.png);
@@ -498,7 +528,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1500px) {
   .wrapper-page-novedades .header-page {
-    margin: 10px 0 100px;
+    margin: 10px 0 60px;
   }
 }
 .wrapper-page-novedades .header-page h1 {
@@ -522,6 +552,7 @@ footer .data-fiscal img {
 }
 .wrapper-page-novedades .wrapper-novedades .novedades .novedad {
   display: flex;
+  width: 100%;
   flex-direction: column;
   padding: 40px 0 40px;
 }

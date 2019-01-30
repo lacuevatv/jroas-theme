@@ -122,7 +122,7 @@ get_header(); ?>
 							alt="instagram icon">
 						<h2><span> SUSCRIPCIÓN </span> NEWSLETTER</h2>
 					</div>
-					<form action="" id="contacto-home">
+					<form name="contacto-home" id="contacto-home">
 						<div class="floating-label">
 							<input placeholder="Nombre y apellido" type="text" name="input-name" id="input-name" />
 							<label for="input-name">Nombre y apellido</label>
@@ -135,6 +135,7 @@ get_header(); ?>
 							Enviar
 						</button>
 					</form>
+					<p class="msj-formulario-home"></p>
 				</section>
 			</div>
 

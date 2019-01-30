@@ -259,7 +259,7 @@ require get_template_directory() . '/admin/meta-boxes.php';
 //Load settings files.
 //require get_template_directory() . '/admin/settings.php';
 
-//require_once get_template_directory() . '/admin/ajax.php';
+require_once get_template_directory() . '/admin/ajax.php';
 
 //require_once  get_template_directory() . '/inc/lib/mobile-detect/Mobile_Detect.php';
 

@@ -34,7 +34,7 @@
     
             activateSliders();
             extraInfoAgenda();
-            toglerNav();
+            //toglerNav();
         }
     
         /***************/
@@ -67,6 +67,154 @@
             console.log('he')
             $('.navbar-title').toggleClass('navbar-title-opened');
         });
+
+
+        /*
+         * formularios
+        */
+        $(document).on('submit', '#contact_form', function( e ) {
+            e.preventDefault();
+            //var loader = $('.loader');
+            
+            var msj = $(this).find('.msj-formulario');
+            formData = new FormData( this );
+
+            var mensaje = 'Su mensaje ha sido enviado, responderemos a la brevedad';
+            var mensajeError = 'Hubo un error, intente más tarde';
+
+            /*
+             * datos del formulario
+            */
+           var name = $(this).find('input[name="contact_name"]').val();
+           var email = $(this).find('input[name="contact_email"]').val();
+           var mensaje = $(this).find('textarea[name="contact_msj"]').val();
+           var formulario = 'contacto';
+
+            $.ajax( {
+                type: 'POST',
+                url: window.jrojasScriptsData.ajaxurl,
+                data: {
+                    action: 'formulario_contacto',
+                    name: name,
+                    email:email,
+                    mensaje:mensaje,
+                    formulario:formulario,
+                },
+                
+                //funcion antes de enviar
+                beforeSend: function() {
+                    $(msj).text('Enviando formulario').fadeIn();
+                },
+                success: function ( response ) {
+                    console.log(response);
+                    if (response == 'ok') {
+                        msj.text(mensaje);    
+                    } else {
+                        msj.text(mensajeError);    
+                    } 
+                },
+                error: function ( ) {
+                    console.log('error');
+                },
+            });//cierre ajax
+
+        });//submit formulario 1
+
+        $(document).on('submit', '#contratacion_form', function( e ) {
+            e.preventDefault();
+            //var loader = $('.loader');
+            
+            var msj = $(this).find('.msj-formulario');
+            formData = new FormData( this );
+
+            var mensaje = 'Su mensaje ha sido enviado, responderemos a la brevedad';
+            var mensajeError = 'Hubo un error, intente más tarde';
+
+            /*
+             * datos del formulario
+            */
+           var name = $(this).find('input[name="contratacion_name"]').val();
+           var email = $(this).find('input[name="contratacion_email"]').val();
+           var mensaje = $(this).find('textarea[name="contratacion_msj"]').val();
+           var formulario = 'contratacion';
+           
+            $.ajax( {
+                type: 'POST',
+                url: window.jrojasScriptsData.ajaxurl,
+                data: {
+                    action: 'formulario_contacto',
+                    name: name,
+                    email:email,
+                    mensaje:mensaje,
+                    formulario:formulario,
+                },
+                
+                //funcion antes de enviar
+                beforeSend: function() {
+                    $(msj).text('Enviando formulario').fadeIn();
+                },
+                success: function ( response ) {
+                    console.log(response);
+                    if (response == 'ok') {
+                        msj.text(mensaje);    
+                    } else {
+                        msj.text(mensajeError);    
+                    } 
+                },
+                error: function ( ) {
+                    console.log('error');
+                },
+            });//cierre ajax
+
+        });//submit formulario 2
+
+        $(document).on('submit', '#contacto-home', function( e ) {
+            e.preventDefault();
+            //var loader = $('.loader');
+            var formularioBorrar = this;
+            var msj = $('.msj-formulario-home');
+            formData = new FormData( this );
+
+            var mensaje = 'Su mensaje ha sido enviado, responderemos a la brevedad';
+            var mensajeError = 'Hubo un error, intente más tarde';
+
+            /*
+             * datos del formulario
+            */
+            var name = $(this).find('input[name="input-name"]').val();
+            var email = $(this).find('input[name="input-mail"]').val();
+            var formulario = 'suscripcion';
+            
+            $.ajax( {
+                type: 'POST',
+                url: window.jrojasScriptsData.ajaxurl,
+                data: {
+                    action: 'formulario_contacto',
+                    name: name,
+                    email:email,
+                    formulario:formulario,
+                },
+                
+                //funcion antes de enviar
+                beforeSend: function() {
+                    $(msj).text('Enviando formulario').fadeIn();
+                },
+                success: function ( response ) {
+                    console.log(response);
+                    $(formularioBorrar).fadeOut();
+
+                    if (response == 'ok') {
+                        msj.text(mensaje).fadeIn();    
+                    } else {
+                        msj.text(mensajeError).fadeIn();    
+                    } 
+                },
+                error: function ( ) {
+                    console.log('error');
+                },
+            });//cierre ajax
+
+        });//submit formulario 3
     
         /*smooth scroll */
     
