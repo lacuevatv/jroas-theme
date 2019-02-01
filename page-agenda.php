@@ -34,13 +34,14 @@ get_header(); ?>
 			$agendaQuery = new WP_Query( 
 				array(
 					'post_type'       => 'agenda',
+					'posts_per_page' => 50, 
 					'order'           => 'asc',
 					'orderby'   => 'meta_value',
 					'meta_key'  => '_jrojas_agenda_fecha',
 					'meta_query' => array(
 						array(
 							'key'     => '_jrojas_agenda_fecha',
-							'value'   => array( date("Y-m-d",strtotime($fechaActual."- 1 month")), date("Y-m-d",strtotime($fechaActual."+ 4 month")) ),
+							'value'   => array( date("Y-m-d",strtotime($fechaActual."- 1 month")), date("Y-m-d",strtotime($fechaActual."+ 6 month")) ),
 							'type'    => 'DATE',
 							'compare' => 'BETWEEN'
 							),
@@ -130,7 +131,7 @@ get_header(); ?>
 									<div class="descripcion">
 										<div>
 											<h3 class="dia"><?php 
-												$fechaaMostrar =  $arrayDias[date('N', strtotime($agenda['fecha']))] . ' ' . date('j', strtotime($agenda['fecha'])); 
+												$fechaaMostrar =  $arrayDias[date('N', strtotime($agenda['fecha']))-1] . ' ' . date('j', strtotime($agenda['fecha'])); 
 												echo $fechaaMostrar;
 											?>
 											</h3>
