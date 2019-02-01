@@ -287,6 +287,57 @@ if ( ! function_exists( 'jr_getDataVideo' ) ) {
 	}
 }
 
+if ( ! function_exists( 'sendEmailPhpMailer' ) ) {
+	/**
+	 * envia los formularios con phpmailer
+	 *
+	 * @since 1.0
+	 *
+	 * @uses get_post_meta()
+	 */
+	function sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo, $asunto, $contenido) {
+		require_once("inc/lib/class.phpmailer.php");
+		require_once("inc/lib/class.smtp.php");
+
+		$mail = new PHPMailer;
+		//Tell PHPMailer to use SMTP
+		$mail->isSMTP();
+		$mail->Host = 'smtp.gmail.com';
+		$mail->Port = 587;
+		$mail->Username = 'coco.kmkz@gmail.com';
+		$mail->Password = 'EmiliaIsabela';
+		$mail->SMTPAuth = true;
+
+		//Enable SMTP debugging
+		// 0 = off (for production use)
+		// 1 = client messages
+		// 2 = client and server messages
+		$mail->SMTPDebug = 0;
+		$mail->CharSet = 'UTF-8';
+		//Set who the message is to be sent from
+		//$mail->setFrom(EMAILDEFAULT, SITETITLE);
+		$mail->setFrom('coco.kmkz@gmail.com', 'Jorge Rojas');
+		//Set an alternative reply-to address
+		$mail->addReplyTo($emailReplyTo, $nombreReplyTo);
+		//Set who the message is to be sent to
+		$mail->addAddress($emailTo, $nombreTo);
+		//Set the subject line
+		$mail->Subject = $asunto;
+		$mail->IsHTML(true);
+		//Read an HTML message body from an external file, convert referenced images to embedded,
+		$mail->MsgHTML($contenido);
+		$mail->AltBody = $contenido;
+		//send the message, check for errors
+		
+		if (!$mail->send()) {
+			$error = ' - '. $mail->ErrorInfo;
+			return $error;
+			
+		} else {
+			return 'Su mensaje ha sido enviado';
+		}
+	}
+}
 
 /*if ( ! function_exists( 'dispositivo' ) ) {
 	/**

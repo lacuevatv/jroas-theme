@@ -79,9 +79,6 @@
             var msj = $(this).find('.msj-formulario');
             formData = new FormData( this );
 
-            var mensaje = 'Su mensaje ha sido enviado, responderemos a la brevedad';
-            var mensajeError = 'Hubo un error, intente más tarde';
-
             /*
              * datos del formulario
             */
@@ -106,12 +103,8 @@
                     $(msj).text('Enviando formulario').fadeIn();
                 },
                 success: function ( response ) {
-                    console.log(response);
-                    if (response == 'ok') {
-                        msj.text(mensaje);    
-                    } else {
-                        msj.text(mensajeError);    
-                    } 
+                    //console.log(response);
+                    msj.text(response);
                 },
                 error: function ( ) {
                     console.log('error');
@@ -127,16 +120,14 @@
             var msj = $(this).find('.msj-formulario');
             formData = new FormData( this );
 
-            var mensaje = 'Su mensaje ha sido enviado, responderemos a la brevedad';
-            var mensajeError = 'Hubo un error, intente más tarde';
 
             /*
              * datos del formulario
             */
-           var name = $(this).find('input[name="contratacion_name"]').val();
-           var email = $(this).find('input[name="contratacion_email"]').val();
-           var mensaje = $(this).find('textarea[name="contratacion_msj"]').val();
-           var formulario = 'contratacion';
+            var name = $(this).find('input[name="contratacion_name"]').val();
+            var email = $(this).find('input[name="contratacion_email"]').val();
+            var mensaje = $(this).find('textarea[name="contratacion_msj"]').val();
+            var formulario = 'contratacion';
            
             $.ajax( {
                 type: 'POST',
@@ -154,12 +145,7 @@
                     $(msj).text('Enviando formulario').fadeIn();
                 },
                 success: function ( response ) {
-                    console.log(response);
-                    if (response == 'ok') {
-                        msj.text(mensaje);    
-                    } else {
-                        msj.text(mensajeError);    
-                    } 
+                    msj.text(response);
                 },
                 error: function ( ) {
                     console.log('error');
@@ -174,9 +160,6 @@
             var formularioBorrar = this;
             var msj = $('.msj-formulario-home');
             formData = new FormData( this );
-
-            var mensaje = 'Su mensaje ha sido enviado, responderemos a la brevedad';
-            var mensajeError = 'Hubo un error, intente más tarde';
 
             /*
              * datos del formulario
@@ -200,14 +183,8 @@
                     $(msj).text('Enviando formulario').fadeIn();
                 },
                 success: function ( response ) {
-                    console.log(response);
+                    msj.text(response);
                     $(formularioBorrar).fadeOut();
-
-                    if (response == 'ok') {
-                        msj.text(mensaje).fadeIn();    
-                    } else {
-                        msj.text(mensajeError).fadeIn();    
-                    } 
                 },
                 error: function ( ) {
                     console.log('error');
