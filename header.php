@@ -24,7 +24,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="wrapper">
+<div class="wrapper" <?php if( is_page_template( 'page-agenda.php' ) ) { echo 'id="agenda"'; } ?>>
 	
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Directo al contenido', 'jrojas' ); ?></a>
 

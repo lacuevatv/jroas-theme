@@ -255,7 +255,7 @@
                         breakpoint: 1200,
                         settings: {
                             slidesToShow: 5,
-                            initialSlide: 2,
+                            initialSlide: 1,
                             centerMode: true
                         }
                     },
@@ -281,7 +281,7 @@
                     {
                         breakpoint: 1200,
                         settings: {
-                            initialSlide: 2,
+                            initialSlide: 1,
                         }
                     },
                     {

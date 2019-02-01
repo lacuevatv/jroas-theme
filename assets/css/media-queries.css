@@ -216,10 +216,11 @@
   top: auto;
   left: auto;
 }
-.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info p {
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info div {
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
-  font-size: 3.4vw;
+  /*font-size: 3.4vw;*/
+  font-size:.9vw;
   margin: 0;
 }
 .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn {

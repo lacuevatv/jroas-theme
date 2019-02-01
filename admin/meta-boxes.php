@@ -319,7 +319,8 @@ if ( ! function_exists( 'jrojas_add_metabox_agenda_callback' ) ) {
     function jrojas_add_metabox_agenda_callback( WP_Post $post ) {
         wp_nonce_field( 'jrojas_agenda', 'jrojas_agenda_nonce' );
 
-        $metaagenda = get_post_meta( $post->ID, '_jrojas_agenda', true );
+		$metaagendaLugar = get_post_meta( $post->ID, '_jrojas_agenda_lugar', true );
+		$metaagendaFecha = get_post_meta( $post->ID, '_jrojas_agenda_fecha', true );
         ?>
 
         <div class="jrojas_metabox_wrapper">
@@ -332,7 +333,7 @@ if ( ! function_exists( 'jrojas_add_metabox_agenda_callback' ) ) {
 	            	<label for="jrojas_lugar">
 						<?php esc_html_e( 'Lugar', 'jrojas' ); ?>
 					</label>
-            		<input type="text" name="jrojas_lugar" id="jrojas_lugar" value="<?php echo isset($metaagenda[0]) ? esc_attr( $metaagenda[0]) : ''; ?>"/>		
+            		<input type="text" name="jrojas_lugar" id="jrojas_lugar" value="<?php echo isset($metaagendaLugar) ? esc_attr( $metaagendaLugar) : ''; ?>"/>		
 				</div>
 			</div>
 			<div class="jrojas_metabox_input_data_wrapper">
@@ -340,7 +341,7 @@ if ( ! function_exists( 'jrojas_add_metabox_agenda_callback' ) ) {
 	            	<label for="jrojas_fecha">
 						<?php esc_html_e( 'Fecha', 'jrojas' ); ?>
 					</label>
-            		<input type="date" name="jrojas_fecha" id="jrojas_fecha" value="<?php echo isset($metaagenda[1]) ? esc_attr( $metaagenda[1]) : ''; ?>"/>		
+            		<input type="date" name="jrojas_fecha" id="jrojas_fecha" value="<?php echo isset($metaagendaFecha) ? esc_attr( $metaagendaFecha ) : ''; ?>"/>		
 				</div>
             </div>
         </div>
@@ -387,13 +388,8 @@ if ( ! function_exists( 'jrojas_save_metabox_agenda' ) ) {
 		}
 		
         // Guardamos:
-		$dataSlider = array();
-		array_push($dataSlider, sanitize_text_field( $_POST['jrojas_lugar'] ) );
-		array_push($dataSlider, sanitize_text_field( $_POST['jrojas_fecha'] ) );
-		
-        if ( ! empty( $dataSlider ) ) {
-        	update_post_meta( $post_id, '_jrojas_agenda', $dataSlider );
-        }
+		update_post_meta( $post_id, '_jrojas_agenda_lugar', sanitize_text_field( $_POST['jrojas_lugar'] ) );
+		update_post_meta( $post_id, '_jrojas_agenda_fecha', sanitize_text_field( $_POST['jrojas_fecha'] ) );
         
  	}   
 }

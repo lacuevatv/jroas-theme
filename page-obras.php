@@ -36,7 +36,7 @@ get_header(); ?>
 					) 
 			);
 			
-			$defaultMiniatura = get_template_directory_uri() . '/assets/images/default-image-scuare.png';;
+			$defaultMiniatura = get_template_directory_uri() . '/assets/images/default-image-scuare.png';
 
 			if ( $obras->have_posts() ) :
 				
