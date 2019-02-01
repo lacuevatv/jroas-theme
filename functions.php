@@ -304,8 +304,8 @@ if ( ! function_exists( 'sendEmailPhpMailer' ) ) {
 		$mail->isSMTP();
 		$mail->Host = 'smtp.gmail.com';
 		$mail->Port = 587;
-		$mail->Username = 'coco.kmkz@gmail.com';
-		$mail->Password = 'EmiliaIsabela';
+		//$mail->Username = '';
+		//$mail->Password = '';
 		$mail->SMTPAuth = true;
 
 		//Enable SMTP debugging
