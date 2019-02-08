@@ -447,7 +447,7 @@ if ( ! function_exists( 'jrojas_add_metabox_obras_callback' ) ) {
         	<div class="jrojas_metabox_input_data_wrapper">
 				<div class="metabox_input_data">
 	            	<label for="jrojas_fecha">
-						<?php esc_html_e( 'Fecha disco', 'jrojas' ); ?>
+						<?php esc_html_e( 'Fecha disco (Poner sólo el año: Ej: 2019)', 'jrojas' ); ?>
 					</label>
             		<input type="text" name="jrojas_fecha" id="jrojas_fecha" value="<?php echo isset($metaobrasFecha) ? esc_attr( $metaobrasFecha) : ''; ?>"/>		
 				</div>
@@ -542,8 +542,15 @@ if ( ! function_exists( 'jrojas_save_metabox_obras' ) ) {
 		}
 		
 		$fechaDisco = sanitize_text_field( $_POST['jrojas_fecha'] );
+
 		if ( $fechaDisco == '' ) {
 			$fechaDisco = date ('Y');
+		} else {
+			$fechaDisco = date("Y", strtotime($fechaDisco));
+		
+			if ($fechaDisco == '1970' || (int)$fechaDisco == 0 ) {
+				$fechaDisco = '2019';
+			}
 		}
 
         // Guardamos:
