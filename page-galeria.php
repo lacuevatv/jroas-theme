@@ -29,6 +29,7 @@ get_header(); ?>
 					array(
 						'post_type'       => 'galeria',
 						'order'           => 'desc',
+						'posts_per_page' => 100, 
 						) 
 				);
 

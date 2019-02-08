@@ -30,6 +30,7 @@ get_header(); ?>
 			$obras = new WP_Query( 
 				array(
 					'post_type'       => 'obras',
+					'posts_per_page' => 50, 
 					'order'           => 'desc',
 					'meta_key' => '_jrojas_obras',
     				'orderby' => 'jrojas_fecha',

@@ -30,6 +30,7 @@ get_header(); ?>
 					array(
 						'post_type'       => 'sliders',
 						'order'           => 'desc',
+						'posts_per_page' => 10, 
 						) 
 				);
 
