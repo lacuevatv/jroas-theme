@@ -47,7 +47,7 @@ get_header(); ?>
                             
                             <div class="form-group">
                                 <label for="contact_name">Nombre y Apellido</label>
-                                <input type="text" class="form-control" name="contact_name" placeholder="Nombre y Apellido" required>
+                                <input maxlength="100" type="text" class="form-control" name="contact_name" placeholder="Nombre y Apellido" required>
                             </div>
                             
                             <div class="form-group">
@@ -57,7 +57,7 @@ get_header(); ?>
 
                             <div class="form-group">
                                 <label for="contact_msj">Mensaje</label>
-                                <textarea class="form-control" name="contact_msj" rows="3" placeholder="Mensaje" required></textarea>
+                                <textarea maxlength="500" class="form-control" name="contact_msj" rows="3" placeholder="Mensaje" required></textarea>
                             </div>
 
                             <div class="btn-wrapper">
@@ -74,7 +74,7 @@ get_header(); ?>
                             
                             <div class="form-group">
                                 <label for="contratacion_name">Nombre y Apellido</label>
-                                <input type="text" class="form-control" name="contratacion_name" placeholder="Nombre y Apellido" required>
+                                <input maxlength="100" type="text" class="form-control" name="contratacion_name" placeholder="Nombre y Apellido" required>
                             </div>
                             
                             <div class="form-group">
@@ -84,7 +84,7 @@ get_header(); ?>
 
                             <div class="form-group">
                                 <label for="contratacion_msj">Mensaje</label>
-                                <textarea class="form-control" name="contratacion_msj" rows="3" placeholder="Mensaje" required></textarea>
+                                <textarea maxlength="500" class="form-control" name="contratacion_msj" rows="3" placeholder="Mensaje" required></textarea>
                             </div>
 
                             <div class="btn-wrapper">
