@@ -360,17 +360,19 @@
             $('.header-slider').slick({
                 slidesToShow: 7,
                 slidesToScroll: 1,
+                initialSlide: 0,
                 asNavFor: '.body-slider',
                 arrows: true,
                 dots: false,
                 centerMode: true,
                 focusOnSelect: true,
+                focusOnChange: true,
                 centerPadding: '0x',
                 prevArrow:'<button type="button" class="slick-prev"><span class="sr-only">Anterior</span></button>',
                 nextArrow:'<button type="button" class="slick-next"><span class="sr-only">Siguiente</span></button>',
                 responsive: [
                     {
-                        breakpoint: 1200,
+                        breakpoint: 1450,
                         settings: {
                             centerMode: true,
                             slidesToShow: 5

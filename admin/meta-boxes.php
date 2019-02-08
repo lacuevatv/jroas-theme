@@ -435,6 +435,7 @@ if ( ! function_exists( 'jrojas_add_metabox_obras_callback' ) ) {
         wp_nonce_field( 'jrojas_obras', 'jrojas_obras_nonce' );
 
 		$metaobras = get_post_meta( $post->ID, '_jrojas_obras', true );
+		$metaobrasFecha = get_post_meta( $post->ID, '_jrojas_obras_fecha', true );
 		
         ?>
 
@@ -448,7 +449,7 @@ if ( ! function_exists( 'jrojas_add_metabox_obras_callback' ) ) {
 	            	<label for="jrojas_fecha">
 						<?php esc_html_e( 'Fecha disco', 'jrojas' ); ?>
 					</label>
-            		<input type="text" name="jrojas_fecha" id="jrojas_fecha" value="<?php echo isset($metaobras[0]) ? esc_attr( $metaobras[0]) : ''; ?>"/>		
+            		<input type="text" name="jrojas_fecha" id="jrojas_fecha" value="<?php echo isset($metaobrasFecha) ? esc_attr( $metaobrasFecha) : ''; ?>"/>		
 				</div>
 				<div class="metabox_input_data">
 	            	<label for="jrojas_url_compra">
@@ -540,9 +541,14 @@ if ( ! function_exists( 'jrojas_save_metabox_obras' ) ) {
             return;
 		}
 		
+		$fechaDisco = sanitize_text_field( $_POST['jrojas_fecha'] );
+		if ( $fechaDisco == '' ) {
+			$fechaDisco = date ('Y');
+		}
+
         // Guardamos:
 		$dataObras = array();
-		array_push($dataObras, sanitize_text_field( $_POST['jrojas_fecha'] ) );
+		array_push($dataObras, $fechaDisco );
 		array_push($dataObras, esc_url( $_POST['jrojas_url_compra'] ) );
 		array_push($dataObras, esc_url( $_POST['jrojas_url_spotify'] ) );
 		array_push($dataObras, esc_url( $_POST['jrojas_url_apple'] ) );
@@ -551,7 +557,10 @@ if ( ! function_exists( 'jrojas_save_metabox_obras' ) ) {
 		
         if ( ! empty( $dataObras ) ) {
         	update_post_meta( $post_id, '_jrojas_obras', $dataObras );
-        }
+		}
+		
+		
+		update_post_meta( $post_id, '_jrojas_obras_fecha', $fechaDisco );
         
  	}   
 }

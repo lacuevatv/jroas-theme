@@ -31,9 +31,12 @@ get_header(); ?>
 				array(
 					'post_type'       => 'obras',
 					'posts_per_page' => 50, 
-					'order'           => 'desc',
+					/*'order'           => 'desc',
 					'meta_key' => '_jrojas_obras',
-    				'orderby' => 'jrojas_fecha',
+					'orderby' => 'jrojas_fecha',*/
+					'order'           => 'desc',
+					'orderby'   => 'meta_value',
+					'meta_key'  => '_jrojas_obras_fecha',
 					) 
 			);
 			
