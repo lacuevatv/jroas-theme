@@ -35,6 +35,7 @@ get_header();
 							)
 						);
 					} elseif ( is_singular( 'post' ) ) {
+						echo '<div class="container">';
 						// Previous/next post navigation.
 						the_post_navigation(
 							array(
@@ -46,6 +47,7 @@ get_header();
 									'<span class="post-title">%title</span>',
 							)
 						);
+						echo '</div>';
 					}
 
 					// If comments are open or we have at least one comment, load up the comment template.

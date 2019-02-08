@@ -55,7 +55,7 @@
   position: relative;
   width: 60%;
 }
-#home #newsletter form .floating-label input[type=text] {
+#home #newsletter form .floating-label input[type=text], #home #newsletter form .floating-label input[type=email] {
   background: #000;
   border: 1px solid #979797;
   box-sizing: border-box;
@@ -69,7 +69,7 @@
   transition: all 0.3s linear;
   width: 100%;
 }
-#home #newsletter form .floating-label input[type=text]:focus {
+#home #newsletter form .floating-label input[type=text]:focus, #home #newsletter form .floating-label input[type=email]:focus {
   outline: 0;
   border: 2px solid #979797;
 }
@@ -100,7 +100,7 @@
   background-color: #16113f;
 }
 .wrapper#agenda main {
-  background-image: url(../images/bg-agenda@2x.png);
+  background-image: url(../images/bg-agenda.png);
   background-size: cover;
   background-position: 0% 0%;
   background-repeat: no-repeat;
@@ -313,7 +313,7 @@
   #home #newsletter form .floating-label {
     width: 60%;
   }
-  #home #newsletter form .floating-label input[type=text] {
+  #home #newsletter form .floating-label input[type=text], #home #newsletter form .floating-label input[type=email] {
     font-size: 1.6vw;
     height: 9vw;
     margin: 4% auto;
@@ -426,7 +426,7 @@
     font-size: 5vw;
   }
   .wrapper .page-default main {
-    background-image: url(../images/bg-obra.png);
+    background-image: url(../images/bg-obra.jpg);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
@@ -486,7 +486,7 @@
         }*/
   }
   #home header {
-    background-image: url(../images/bg-home@3x.png);
+    background-image: url(../images/bg-home.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -534,7 +534,7 @@
   #home #newsletter form .floating-label {
     width: 31%;
   }
-  #home #newsletter form .floating-label input[type=text] {
+  #home #newsletter form .floating-label input[type=text], #home #newsletter form .floating-label input[type=email] {
     font-size: 1.25vw;
     height: 4vw;
     margin: 4% auto 6%;
@@ -554,7 +554,7 @@
     margin: 1% 0 0;
   }
   .wrapper .page-default main {
-    background-image: url(../images/bg-obra.png);
+    background-image: url(../images/bg-obra.jpg);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
@@ -719,9 +719,10 @@
     font-size: 5vw;
   }
 }
+
 @media (min-width: 1500px) {
   #home header {
-    background-image: url(../images/bg-home@3x.png);
+    background-image: url(../images/bg-home.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -801,5 +802,20 @@
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
     min-height: 18vw;
   }
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+
+  #home header {
+    background-image: url(../images/bg-home@2x.jpg);
+    background-size: cover;
+  }
+
+  .wrapper#agenda main {
+    background-image: url(../images/bg-agenda@2x.png);
+    background-size: cover;
+  }
+
 }
 /*# sourceMappingURL=main.css.map */

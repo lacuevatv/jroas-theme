@@ -94,11 +94,11 @@ get_header(); ?>
 					</div>
 					<form name="contacto-home" id="contacto-home">
 						<div class="floating-label">
-							<input placeholder="Nombre y apellido" type="text" name="input-name" id="input-name" />
+							<input placeholder="Nombre y apellido" type="text" name="input-name" id="input-name" required />
 							<label for="input-name">Nombre y apellido</label>
 						</div>
 						<div class="floating-label">
-							<input placeholder="Correo electrónico" type="text" name="input-mail" id="input-mail" />
+							<input placeholder="Correo electrónico" type="email" name="input-mail" id="input-mail" required />
 							<label for="input-mail">Correo electrónico</label>
 						</div>
 						<button type="submit" form="contacto-home">

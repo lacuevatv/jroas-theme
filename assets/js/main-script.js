@@ -72,12 +72,21 @@
         /*
          * formularios
         */
+        function emailValidation(valor) {
+            if ( valor == '' || valor.length < 8 || valor.indexOf('@') == -1 || valor.indexOf('@')  == 0 || valor.indexOf('.com') == -1 ) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
         $(document).on('submit', '#contact_form', function( e ) {
             e.preventDefault();
             //var loader = $('.loader');
             
             var msj = $(this).find('.msj-formulario');
             formData = new FormData( this );
+            var f = $(this);
 
             /*
              * datos del formulario
@@ -105,6 +114,9 @@
                 success: function ( response ) {
                     //console.log(response);
                     msj.text(response);
+                    if ( response == 'Su mensaje ha sido enviado' ) {
+                        $(f)[0].reset();
+                    }
                 },
                 error: function ( ) {
                     console.log('error');
@@ -119,8 +131,7 @@
             
             var msj = $(this).find('.msj-formulario');
             formData = new FormData( this );
-
-
+            var f = $(this);
             /*
              * datos del formulario
             */
@@ -146,6 +157,9 @@
                 },
                 success: function ( response ) {
                     msj.text(response);
+                    if ( response == 'Su mensaje ha sido enviado' ) {
+                        $(f)[0].reset();
+                    }
                 },
                 error: function ( ) {
                     console.log('error');
@@ -168,6 +182,12 @@
             var email = $(this).find('input[name="input-mail"]').val();
             var formulario = 'suscripcion';
             
+            if ( ! emailValidation(email) ) {
+                msj.text('El email no válido').fadeIn();
+                return true;
+            }
+
+
             $.ajax( {
                 type: 'POST',
                 url: window.jrojasScriptsData.ajaxurl,

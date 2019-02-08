@@ -33,14 +33,14 @@ get_header(); ?>
 
 			// Load posts loop.
 			while ( have_posts() ) {
-				//echo '<li>';
+				
 				the_post();
 				get_template_part( 'template-parts/content' );
-				//echo '</li>';
+				
 			}
 
 			// Previous/next page navigation.
-			//twentynineteen_the_posts_navigation();
+			jrojas_the_posts_navigation();
 
 		} else {
 

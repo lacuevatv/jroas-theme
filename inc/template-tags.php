@@ -217,3 +217,28 @@ function jrojas_category_transient_flusher() {
 }
 add_action( 'edit_category', 'jrojas_category_transient_flusher' );
 add_action( 'save_post',     'jrojas_category_transient_flusher' );
+
+
+
+if ( ! function_exists( 'jrojas_the_posts_navigation' ) ) :
+	/**
+	 * Documentation for function.
+	 */
+	function jrojas_the_posts_navigation() {
+		echo '<div class="container">';
+		the_posts_pagination(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => sprintf(
+					'<span class="nav-prev-text">%s</span>',
+					__( '< Anterior', 'jrojas' )
+				),
+				'next_text' => sprintf(
+					'<span class="nav-next-text">%s</span>',
+					__( 'Siguiente >', 'jrojas' )
+				),
+			)
+		);
+		echo '</div>';
+	}
+endif;

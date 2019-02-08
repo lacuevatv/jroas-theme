@@ -36,7 +36,7 @@
 			the_post_thumbnail();
 			
 		} else { ?>
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-image.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/default-image@2x.png 2x" alt="imagen-novedad">
+			<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-image.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/default-image@2x.png 2x" alt="imagen-novedad">
 		<?php } ?>
 	</div>
 
@@ -49,7 +49,7 @@
 		</div>
 
 		<?php
-		the_content(
+		/*the_content(
 			sprintf(
 				wp_kses(
 					__( 'Seguir leyendo<span class="screen-reader-text"> "%s"</span>', 'jrojas' ),
@@ -61,7 +61,8 @@
 				),
 				get_the_title()
 			)
-		);
+		);*/
+		the_excerpt();
 		?>
 
 		<a href="<?php echo esc_url( get_permalink() ); ?>" class="link-novedad">

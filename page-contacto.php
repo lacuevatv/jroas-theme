@@ -47,17 +47,17 @@ get_header(); ?>
                             
                             <div class="form-group">
                                 <label for="contact_name">Nombre y Apellido</label>
-                                <input type="text" class="form-control" name="contact_name" placeholder="Nombre y Apellido">
+                                <input type="text" class="form-control" name="contact_name" placeholder="Nombre y Apellido" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="contact_email">Correo electrónico</label>
-                                <input type="email" class="form-control" name="contact_email" placeholder="Correo electrónico">
+                                <input type="email" class="form-control" name="contact_email" placeholder="Correo electrónico" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="contact_msj">Mensaje</label>
-                                <textarea class="form-control" name="contact_msj" rows="3">Mensaje</textarea>
+                                <textarea class="form-control" name="contact_msj" rows="3" placeholder="Mensaje" required></textarea>
                             </div>
 
                             <div class="btn-wrapper">
@@ -74,17 +74,17 @@ get_header(); ?>
                             
                             <div class="form-group">
                                 <label for="contratacion_name">Nombre y Apellido</label>
-                                <input type="text" class="form-control" name="contratacion_name" placeholder="Nombre y Apellido">
+                                <input type="text" class="form-control" name="contratacion_name" placeholder="Nombre y Apellido" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="contratacion_email">Correo electrónico</label>
-                                <input type="email" class="form-control" name="contratacion_email" placeholder="Correo electrónico">
+                                <input type="email" class="form-control" name="contratacion_email" placeholder="Correo electrónico" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="contratacion_msj">Mensaje</label>
-                                <textarea class="form-control" name="contratacion_msj" rows="3">Mensaje</textarea>
+                                <textarea class="form-control" name="contratacion_msj" rows="3" placeholder="Mensaje" required></textarea>
                             </div>
 
                             <div class="btn-wrapper">

@@ -58,9 +58,8 @@
 			?>
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
-			<?php jrojas_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		
+		<?php jrojas_entry_footer(); ?>
 	</div>
 
 </article><!-- #post-${ID} -->
