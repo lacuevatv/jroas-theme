@@ -614,6 +614,10 @@ footer .data-fiscal img {
   background-color: transparent;
 }
 
+.pagination-margin {
+  margin-top: 3rem;
+}
+
 .post-navigation .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,8 +631,13 @@ footer .data-fiscal img {
   color: #fff;
 }
 
+.post-navigation .nav-links .nav-previous {
+  width: 100%;
+}
+
 .post-navigation .nav-links .nav-next {
   text-align: right;
+  width: 100%;
 }
 
 .post-navigation .nav-links a {
@@ -973,13 +982,14 @@ footer .data-fiscal img {
 .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .item-slider-wrapper .contenido .info-item {
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 40%;
   width: 70%;
   transition: all 0.5s;
 }
 @media (min-width: 1200px) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .item-slider-wrapper .contenido .info-item {
     left: 15%;
+    bottom: 40%;
   }
 }
 @media (min-width: 1500px) {

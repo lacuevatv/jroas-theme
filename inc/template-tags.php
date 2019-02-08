@@ -222,10 +222,10 @@ add_action( 'save_post',     'jrojas_category_transient_flusher' );
 
 if ( ! function_exists( 'jrojas_the_posts_navigation' ) ) :
 	/**
-	 * Documentation for function.
+	 * mustra la paginacion en el index
 	 */
 	function jrojas_the_posts_navigation() {
-		echo '<div class="container">';
+		echo '<div class="container pagination-margin">';
 		the_posts_pagination(
 			array(
 				'mid_size'  => 2,
