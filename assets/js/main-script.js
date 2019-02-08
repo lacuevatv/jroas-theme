@@ -244,6 +244,7 @@
                 centerMode: true,
                 arrows: false,
                 asNavFor: '#slick-carousel-eventos',
+                focusOnSelect: true,
                 dots: false,
                 infinite: false,
                 mobileFirst: true,
@@ -251,7 +252,7 @@
                     {
                         breakpoint: 1200,
                         settings: {
-                            slidesToShow: 5,
+                            slidesToShow: 3,
                             initialSlide: 1,
                             centerMode: true
                         }

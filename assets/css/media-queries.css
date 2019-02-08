@@ -110,6 +110,7 @@
   display: flex;
   flex-flow: column-reverse;
   transition: opacity 0.5s linear;
+  outline: none;
 }
 .wrapper#agenda main #navegacion #slick-carousel-fecha .fecha:not(.slick-center) {
   opacity: 0.5;
@@ -219,8 +220,7 @@
 .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info div {
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
-  /*font-size: 3.4vw;*/
-  font-size:.9vw;
+  font-size: 2.5vw;
   margin: 0;
 }
 .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info .hide-info-btn {
@@ -366,7 +366,7 @@
     right: 5%;
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
-    border: 0.5px solid white;
+    /*border: 0.5px solid white;*/
     min-height: 40vw;
     position: relative;
   }
@@ -390,6 +390,7 @@
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn span {
     font-size: 5vw;
   }
+  
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(odd) {
     border-left: none;
   }
@@ -399,14 +400,30 @@
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(-n + 2) {
     border-top: none;
   }
-  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(n + 2) {
-    border-bottom: none;
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(n + 3) {
+    border-top: 1px solid white;
   }
+
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(2) {
+    border-left: 1px solid white;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(4) {
+    border-left: 1px solid white;
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(6) {
+    border-left: 1px solid white;
+  }
+
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .extra-info {
     width: 60%;
     margin: 7% auto 0;
     min-height: 30vw;
   }
+
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info div {
+    font-size: 1.35vw;
+  }
+
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .main-info {
     opacity: 0;
     position: absolute;
@@ -640,7 +657,7 @@
     right: 5%;
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
-    border: 0.5px solid white;
+    /*border: 0.5px solid white;*/
     min-height: 20vw;
     position: relative;
   }
@@ -669,6 +686,11 @@
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .main-info .more-info-btn span {
     font-size: 5vw;
   }
+
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info div {
+    font-size: .9vw;
+  }
+
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(odd) {
     border-left: none;
     border-right: none;
@@ -679,17 +701,25 @@
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(2) {
     border-left: 0.5px solid white;
-    border-right: 0.5px solid white;
+    /*border-right: 0.5px solid white;*/
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(3) {
+    border-left: 0.5px solid white;
+    /*border-right: 0.5px solid white;*/
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(5) {
     border-left: 0.5px solid white;
-    border-right: 0.5px solid white;
+    /*border-right: 0.5px solid white;*/
   }
-  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(-n + 4) {
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(6) {
+    border-left: 0.5px solid white;
+    /*border-right: 0.5px solid white;*/
+  }
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(-n + 3) {
     border-top: none;
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento:nth-of-type(n + 3) {
-    border-bottom: none;
+    /*border-top: none;*/
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento .extra-info {
     width: 80%;
@@ -801,6 +831,10 @@
   }
   .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento {
     min-height: 18vw;
+  }
+
+  .wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .evento.expand-info .extra-info div {
+    font-size:.75vw;
   }
 }
 
