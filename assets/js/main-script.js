@@ -64,7 +64,7 @@
     
         //asigna una clase al titulo para poder cambiar al abrir el menu
         $('.navbar-toggler').on('click', function(){
-            console.log('he')
+            //console.log('he')
             $('.navbar-title').toggleClass('navbar-title-opened');
         });
 
