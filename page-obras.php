@@ -143,13 +143,13 @@ get_header(); ?>
 										Escuchar Online
 									</h3>
 
-									<?php if ( $obrita['metadata']['2'] != '' ) : ?>
-										<a href="<?php echo esc_url( $obrita['metadata']['2'] ); ?>" class="link-escuchar" target="_blank">
+									<?php if ( $obrita['metadata']['3'] != '' ) : ?>
+										<a href="<?php echo esc_url( $obrita['metadata']['3'] ); ?>" class="link-escuchar" target="_blank">
 											Apple music
 										</a>
 									<?php endif; ?>
-									<?php if ( $obrita['metadata']['3'] != '' ) : ?>
-										<a href="<?php echo esc_url( $obrita['metadata']['3'] ); ?>" class="link-escuchar" target="_blank">
+									<?php if ( $obrita['metadata']['2'] != '' ) : ?>
+										<a href="<?php echo esc_url( $obrita['metadata']['2'] ); ?>" class="link-escuchar" target="_blank">
 											Spotify
 										</a>
 									<?php endif; ?>

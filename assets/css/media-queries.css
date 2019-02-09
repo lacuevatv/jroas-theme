@@ -237,6 +237,11 @@
 .wrapper .page-default main {
   background-color: #16113f;
 }
+
+.wrapper .page-default main .col-text .row .biografia-slider {
+  margin-bottom: 40px;
+}
+
 .wrapper .page-default main .col-text .row .biografia-slider p {
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
@@ -270,6 +275,16 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .prev-arrow {
+  font-size: 28px;
+  padding: 10px;
+}
+
+.wrapper#agenda main #eventos #slick-carousel-eventos .grilla-eventos .next-arrow {
+  font-size: 28px;
+  padding: 10px;
 }
 /* ************* */
 /*  BOOTSTRAP SM */
@@ -751,6 +766,11 @@
 }
 
 @media (min-width: 1500px) {
+
+  .container {
+    max-width: 1600px!important;
+  }
+
   #home header {
     background-image: url(../images/bg-home.jpg);
     background-size: cover;
@@ -812,6 +832,7 @@
   .wrapper .page-default .headline {
     padding: 2% 0;
   }
+
   .wrapper .page-default main .col-text .row .biografia-slider p {
     font-size: 16px;
     line-height: 1.5;

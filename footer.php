@@ -56,10 +56,9 @@
                                     alt="Youtube"></a>
                         </li>
                     </ul>
-                    <p class="legal-txt-pc">2018 - Todos los derechos reservados</p>
                 </div>
                 <div class="legal d-flex justify-content-center">
-                    <p class="legal-txt">2018 - Todos los derechos reservados</p>
+                    <p class="legal-txt">2019 - Todos los derechos reservados</p>
                 </div>
                 <div class="sancor d-flex justify-content-center align-items-center">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sancor-seguros.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sancor-seguros@2x.png 2x,

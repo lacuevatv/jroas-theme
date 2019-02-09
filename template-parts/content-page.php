@@ -19,7 +19,7 @@
 		
 			<div class="col-text container-fluid">
                 <div class="row">
-                    <div class="biografia-slider col-sm-12 col-md-10 offset-md-1 col-xl-5 offset-xl-5">
+                    <div class="biografia-slider col-sm-12 col-md-10 offset-md-1 col-xl-5 offset-xl-6">
                         <div class="mx-2">
 							<?php the_content(); ?>
 						</div>

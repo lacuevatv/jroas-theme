@@ -837,12 +837,26 @@ footer .data-fiscal img {
     background-size: 19px 35px;
   }
 }
-@media (min-width: 1600px) {
+
+@media (min-width: 1200px) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
-    left: 3%;
+    left: 15%;
   }
 }
-@media (min-width: 1600px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1600px) and only screen and (min-resolution: 240dpi) {
+@media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min-resolution: 240dpi) {
+  .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
+    background-image: url(../images/arrow-prev@2x.png);
+    background-size: 19px 35px;
+    left: 15%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
+    left: 7%;
+  }
+}
+@media (min-width: 1500px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-prev {
     background-image: url(../images/arrow-prev@2x.png);
     background-size: 19px 35px;
@@ -883,9 +897,24 @@ footer .data-fiscal img {
     background-size: 19px 35px;
   }
 }
+
+@media (min-width: 1200px) {
+  .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-next {
+    right: 15%;
+  }
+}
+
+@media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min-resolution: 240dpi) {
+  .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-next {
+    background-image: url(../images/arrow-next@2x.png);
+    background-size: 19px 35px;
+    right: 15%;
+  }
+}
+
 @media (min-width: 1500px) {
   .wrapper-page-galeria .slider-wrapper .slider-galeria-bigger .slick-next {
-    right: 3%;
+    right: 7%;
   }
 }
 @media (min-width: 1500px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min-resolution: 240dpi) {
@@ -1744,12 +1773,13 @@ footer .data-fiscal img {
     margin-top: 15px;
   }
   .main-footer .legal {
-    display: none!important;
+    /*display: none!important;*/
   }
   .main-footer .sancor {
     display: none!important;
   }
   .main-footer .sancor-pc-imagen {
+    display: block;
     align-self: center;
     margin-right: 20px;
   }

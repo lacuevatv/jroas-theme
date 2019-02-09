@@ -241,6 +241,7 @@
             $("#slick-carousel-fecha").slick({
                 slidesToScroll: 1,
                 slidesToShow: 1,
+                initialSlide: 1,
                 centerMode: true,
                 arrows: false,
                 asNavFor: '#slick-carousel-eventos',
@@ -275,6 +276,7 @@
                 arrows: false,
                 adaptiveHeight: true,
                 mobileFirst: true,
+                initialSlide: 1,
                 responsive: [
                     {
                         breakpoint: 1200,
