@@ -7,6 +7,12 @@
 /**********************/
 /*   Mobile first     */
 /**********************/
+#home header {
+  background-image: url(../images/bg-home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 #home .headline {
   position: relative;
   padding: 45vw 0 5vw;
@@ -860,7 +866,7 @@
 }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+@media (min-width: 1500px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min-resolution: 240dpi) {
 
   #home header {
     background-image: url(../images/bg-home@2x.jpg);
