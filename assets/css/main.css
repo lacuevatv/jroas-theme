@@ -264,13 +264,13 @@ footer .data-fiscal img {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-image: url(../images/bgd-noticias-pc.png);
+    background-image: url(../images/bg-contacto.jpg);
     background-size: cover;
   }
 }
 @media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-contacto {
-    background-image: url(../images/bgd-noticias-pc@2x.png);
+    background-image: url(../images/bg-contacto@2x.png);
     background-size: cover;
   }
 }
@@ -281,7 +281,7 @@ footer .data-fiscal img {
 }
 @media (min-width: 1500px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min--moz-device-pixel-ratio: 1.5), (min-width: 1500px) and only screen and (min-resolution: 240dpi) {
   .wrapper-page-contacto {
-    background-image: url(../images/bgd-noticias-pc@2x.png);
+    background-image: url(../images/bg-contacto@2x.png);
     background-size: cover;
   }
 }

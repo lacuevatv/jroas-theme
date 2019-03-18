@@ -106,9 +106,9 @@
   background-color: #16113f;
 }
 .wrapper#agenda main {
-  background-image: url(../images/bg-agenda.png);
+  background-image: url(../images/bg-agenda.jpg);
   background-size: cover;
-  background-position: 0% 0%;
+  background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 10%;
 }
@@ -464,7 +464,7 @@
     font-size: 5vw;
   }
   .wrapper .page-default main {
-    background-image: url(../images/bg-obra.jpg);
+    background-image: url(../images/bg-bio.jpg);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
@@ -592,7 +592,7 @@
     margin: 1% 0 0;
   }
   .wrapper .page-default main {
-    background-image: url(../images/bg-obra.jpg);
+    background-image: url(../images/bg-bio.jpg);
     background-position: 50% 0%;
     background-size: cover;
     position: relative;
@@ -874,7 +874,7 @@
   }
 
   .wrapper#agenda main {
-    background-image: url(../images/bg-agenda@2x.png);
+    background-image: url(../images/bg-agenda@2x.jpg);
     background-size: cover;
   }
 
