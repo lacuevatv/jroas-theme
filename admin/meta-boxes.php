@@ -543,16 +543,6 @@ if ( ! function_exists( 'jrojas_save_metabox_obras' ) ) {
 		
 		$fechaDisco = sanitize_text_field( $_POST['jrojas_fecha'] );
 
-		if ( $fechaDisco == '' ) {
-			$fechaDisco = date ('Y');
-		} else {
-			$fechaDisco = date("Y", strtotime($fechaDisco));
-		
-			if ($fechaDisco == '1970' || (int)$fechaDisco == 0 ) {
-				$fechaDisco = '2019';
-			}
-		}
-
         // Guardamos:
 		$dataObras = array();
 		array_push($dataObras, $fechaDisco );
